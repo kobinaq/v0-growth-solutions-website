@@ -1,0 +1,32 @@
+{
+  "title": "Solar-Powered School Electrification",
+  "slug": "solar-school-accra",
+  "focusArea": "Clean Energy",
+  "clientType": "Educational Institution",
+  "location": "Kotobabi, Accra, Ghana",
+  "dates": "2023",
+  "challenge": "A primary school serving 400 students had no reliable electricity, limiting teaching hours and preventing use of educational technology. High energy costs from diesel generators were unsustainable for the school budget.",
+  "approach": "We conducted an energy audit and co-designed a solar solution with school administrators, teachers, and the parent-teacher association. We facilitated access to clean energy financing, supervised installation, and trained staff in system maintenance. We also integrated energy education into the school curriculum.",
+  "outcomes": [
+    "Installed 15kW solar system providing 100% daytime power needs",
+    "Reduced school energy costs by 78% annually [placeholder]",
+    "Extended teaching hours by 3 hours daily with evening classes",
+    "Enabled computer lab serving 400 students",
+    "Created 2 local jobs for system maintenance"
+  ],
+  "gallery": ["/assets/projects/solar-school-1.jpg"],
+  "metrics": [
+    {
+      "value": "400",
+      "label": "Students Benefiting"
+    },
+    {
+      "value": "78%",
+      "label": "Energy Cost Reduction [placeholder]"
+    },
+    {
+      "value": "15kW",
+      "label": "Solar Capacity"
+    }
+  ]
+}

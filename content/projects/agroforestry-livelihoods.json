@@ -1,0 +1,37 @@
+{
+  "title": "Agroforestry Livelihood Development",
+  "slug": "agroforestry-livelihoods",
+  "focusArea": "Livelihood Development",
+  "clientType": "Farmer Cooperatives",
+  "location": "Eastern Region, Ghana",
+  "dates": "2021-2023",
+  "challenge": "Smallholder farmers faced declining soil fertility, low crop yields, and limited market access. Deforestation was increasing as farmers expanded cultivation areas to compensate for poor yields.",
+  "approach": "We worked with 3 farmer cooperatives to introduce agroforestry practices combining food crops with timber and fruit trees. We provided training in sustainable farming techniques, facilitated access to quality seedlings, and established market linkages with urban buyers. We also supported the formation of a savings and credit group.",
+  "outcomes": [
+    "Trained 180 farmers in agroforestry and sustainable agriculture",
+    "Planted 12,000 trees across 85 hectares",
+    "Increased average household income by 45% [placeholder]",
+    "Established direct market linkages reducing middleman costs by 30%",
+    "Improved soil quality and crop diversity on participating farms"
+  ],
+  "gallery": ["/assets/projects/agroforestry-1.jpg"],
+  "metrics": [
+    {
+      "value": "180",
+      "label": "Farmers Trained"
+    },
+    {
+      "value": "12,000",
+      "label": "Trees Planted"
+    },
+    {
+      "value": "45%",
+      "label": "Income Increase [placeholder]"
+    }
+  ],
+  "testimonial": {
+    "quote": "The agroforestry training changed everything. Our farms are more productive, we have new income from timber, and we're protecting the environment for our children.",
+    "author": "Joseph Addo",
+    "role": "Farmer, Eastern Region Cooperative"
+  }
+}

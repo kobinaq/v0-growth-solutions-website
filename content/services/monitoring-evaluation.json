@@ -1,0 +1,18 @@
+{
+  "title": "Monitoring, Evaluation & Learning",
+  "slug": "monitoring-evaluation",
+  "summary": "Design and implement robust MEL systems that generate actionable insights and demonstrate impact.",
+  "body": "<p>We help organizations measure what matters. Our MEL services range from designing comprehensive monitoring frameworks to conducting rigorous impact evaluations. We emphasize participatory approaches that build local capacity while generating credible evidence.</p><p>We support adaptive management by creating feedback loops that enable organizations to learn and improve throughout program implementation.</p>",
+  "capabilities": [
+    "MEL framework and indicator development",
+    "Baseline, midline, and endline surveys",
+    "Participatory impact assessment",
+    "Data collection tool design and testing",
+    "Qualitative and quantitative data analysis",
+    "Impact story documentation and knowledge harvesting",
+    "Learning events and reflection workshops",
+    "Donor reporting and communication"
+  ],
+  "focusAreas": ["Environmental Solutions", "Livelihood Development", "Gender Equality", "Good Governance"],
+  "contactCTAOverride": "Let's measure and amplify your impact."
+}

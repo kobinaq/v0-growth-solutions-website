@@ -1,0 +1,45 @@
+{
+  "mission": "Growth Solutions is a social enterprise offering services to provide sustenance in a meaningful way with the right intervention strategies for local communities.",
+  "ethos": "We believe that every individual and community has solutions to their own challenges. We work for and with local communities to identify their resource potential in pursuing their own development. We support local communities through the creation of environmentally sound, socially inclined and economic empowering activities and social enterprises that can lead to solution-oriented and patriotic citizens.",
+  "guidingPrinciples": [
+    "We work with an entrepreneurial spirit and mindset",
+    "We promote transparency and openness in local communities",
+    "We believe in participatory programme and project development",
+    "We facilitate multi-stakeholder platforms for policy influence",
+    "We support local enterprise development with practical tools",
+    "We harvest knowledge and apply it for resource mobilization"
+  ],
+  "approach": "Our approach combines participatory methods with technical expertise. We engage communities through co-design workshops, build capacity through hands-on training, and support implementation with ongoing technical assistance. We emphasize systems thinking, local ownership, and sustainable market linkages.",
+  "partners": [
+    {
+      "name": "SNV Netherlands Development Organisation",
+      "logoPath": "/assets/partners/snv.svg",
+      "url": "https://snv.org"
+    },
+    {
+      "name": "USAID",
+      "logoPath": "/assets/partners/usaid.svg",
+      "url": "https://usaid.gov"
+    },
+    {
+      "name": "UNDP Ghana",
+      "logoPath": "/assets/partners/undp.svg",
+      "url": "https://undp.org"
+    },
+    {
+      "name": "World Bank",
+      "logoPath": "/assets/partners/worldbank.svg",
+      "url": "https://worldbank.org"
+    },
+    {
+      "name": "Government of Netherlands",
+      "logoPath": "/assets/partners/netherlands.svg",
+      "url": "#"
+    },
+    {
+      "name": "DFID",
+      "logoPath": "/assets/partners/dfid.svg",
+      "url": "#"
+    }
+  ]
+}

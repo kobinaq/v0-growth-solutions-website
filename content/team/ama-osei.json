@@ -1,0 +1,9 @@
+{
+  "name": "Ama Osei",
+  "role": "Gender & Social Inclusion Specialist",
+  "headshotPath": "/assets/team/ama-osei.jpg",
+  "bio": "Ama is a gender equality advocate with expertise in organizational capacity building and policy development. She has trained over 50 organizations on gender mainstreaming and inclusive development practices.",
+  "expertise": ["Gender Mainstreaming", "Social Inclusion", "Training & Facilitation", "Policy Development"],
+  "pinToTeamPage": true,
+  "order": 3
+}

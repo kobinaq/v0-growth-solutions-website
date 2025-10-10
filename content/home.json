@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "h1": "Community-led solutions for sustainable development.",
+    "subhead": "We co-create with local communities to design practical, environmentally sustainable and economically empowering initiatives across Ghana.",
+    "primaryCta": {
+      "label": "Request a Consultation",
+      "href": "/about/#contact"
+    },
+    "secondaryCta": {
+      "label": "Explore Our Focus Areas",
+      "href": "/projects/"
+    }
+  },
+  "valueCards": [
+    {
+      "title": "Transparency & Openness",
+      "excerpt": "We share methods, learnings and data to maximize local benefit and build trust with every community partner.",
+      "icon": "◆"
+    },
+    {
+      "title": "Community-First",
+      "excerpt": "Local voices lead design and decision-making at every step. We believe every community has solutions to their own challenges.",
+      "icon": "◆"
+    },
+    {
+      "title": "Entrepreneurial Mindset",
+      "excerpt": "We enable community enterprises and sustainable livelihoods through market-driven, solution-oriented approaches.",
+      "icon": "◆"
+    }
+  ],
+  "processSteps": [
+    {
+      "number": 1,
+      "title": "Discover",
+      "summary": "We engage communities to understand their context, resources, and aspirations through participatory methods."
+    },
+    {
+      "number": 2,
+      "title": "Co-Design",
+      "summary": "Together we develop practical solutions that leverage local knowledge and comparative advantages."
+    },
+    {
+      "number": 3,
+      "title": "Implement",
+      "summary": "We support communities to execute initiatives with capacity building, technical assistance, and resource mobilization."
+    },
+    {
+      "number": 4,
+      "title": "Evaluate & Scale",
+      "summary": "We measure impact, harvest learnings, and identify pathways to scale successful interventions."
+    }
+  ],
+  "focusAreas": [
+    {
+      "title": "Environmental Solutions",
+      "slug": "environment",
+      "short": "Building community capacity for comprehensive environmental problem-solving and natural resource management."
+    },
+    {
+      "title": "Clean Energy",
+      "slug": "energy",
+      "short": "Promoting efficient, clean energy methods that consider socio-economic and cultural contexts."
+    },
+    {
+      "title": "Livelihood Development",
+      "slug": "livelihood",
+      "short": "Creating economic opportunities by adding value to local resources and comparative advantages."
+    },
+    {
+      "title": "Gender Equality",
+      "slug": "gender",
+      "short": "Building organizational capacity for gender mainstreaming through training, research, and facilitation."
+    },
+    {
+      "title": "Good Governance",
+      "slug": "governance",
+      "short": "Strengthening organizations with effective governance techniques, leadership development, and systems."
+    }
+  ],
+  "featuredProjectSlug": "ada-community-water",
+  "latestResources": [
+    {
+      "slug": "climate-adaptation-report-2024",
+      "type": "Report",
+      "title": "Climate Adaptation Strategies for Coastal Communities"
+    },
+    {
+      "slug": "clean-cookstoves-impact",
+      "type": "Case Study",
+      "title": "Clean Cookstoves: Measuring Health and Economic Impact"
+    },
+    {
+      "slug": "community-enterprise-workshop",
+      "type": "Event",
+      "title": "Upcoming: Community Enterprise Development Workshop"
+    }
+  ]
+}

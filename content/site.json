@@ -1,0 +1,20 @@
+{
+  "siteTitle": "Growth Solutions",
+  "metaDescription": "Growth Solutions is a social enterprise offering community-led sustainable development services across Ghana. We co-create environmentally sound, socially inclined, and economically empowering initiatives.",
+  "logoPath": "/assets/logo.svg",
+  "contactEmail": "naadedeiagbey@gmail.com",
+  "phonePrimary": "+233 24 356 5190",
+  "phoneSecondary": "+233 20 812 4700",
+  "address": "C 25, Able Academy Road, P.O. Box KT 58, Kotobabi, Accra, Ghana",
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/company/growth-solutions"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/growthsolutions"
+    }
+  ],
+  "newsletterProvider": "self"
+}
