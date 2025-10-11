@@ -82,7 +82,7 @@ export default function ProjectsPage() {
           </p>
           <Link
             href="/about"
-            className="inline-block bg-white text-green-1 px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
+            className="inline-block bg-green-1 text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
           >
             Work With Us
           </Link>
