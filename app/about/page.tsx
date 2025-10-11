@@ -1,6 +1,4 @@
-import Link from "next/link"
 import aboutData from "@/content/about.json"
-import siteData from "@/content/site.json"
 import sarahData from "@/content/team/sarah-naa-dedei.json"
 import kwameData from "@/content/team/kwame-mensah.json"
 import amaData from "@/content/team/ama-osei.json"
@@ -99,18 +97,81 @@ export default function AboutPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 md:py-28 bg-green-1 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">Let's work together</h2>
-          <p className="text-xl mb-12 max-w-2xl mx-auto opacity-90">
-            Ready to create meaningful change in your community?
-          </p>
-          <Link
-            href={`mailto:${siteData.contactEmail}`}
-            className="inline-block bg-white text-green-1 px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
-          >
-            Get in Touch
-          </Link>
+      <section className="py-20 md:py-28 bg-[#281f1f] text-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">Let's work together</h2>
+              <p className="text-xl opacity-90">
+                Ready to create meaningful change in your community? Get in touch with us.
+              </p>
+            </div>
+
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-white/40 transition-colors"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-white/40 transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="organization" className="block text-sm font-medium mb-2">
+                  Organization
+                </label>
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-white/40 transition-colors"
+                  placeholder="Your organization (optional)"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-white/40 transition-colors resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full md:w-auto bg-white text-black px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

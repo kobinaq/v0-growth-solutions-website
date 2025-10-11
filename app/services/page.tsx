@@ -76,7 +76,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-green-1 text-white">
+      <section className="py-20 md:py-28 bg-[#281f1f] text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">Ready to get started?</h2>
           <p className="text-xl mb-12 max-w-2xl mx-auto opacity-90">
