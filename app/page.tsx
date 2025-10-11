@@ -19,7 +19,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/hero-bg.jpg')", // <-- put your image file in /public/hero-bg.jpg
+            backgroundImage: "url('/hero-bg.png')", // <-- put your image file in /public/hero-bg.jpg
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
