@@ -81,7 +81,7 @@ export default function ProjectsPage() {
             Every community has unique strengths. Let's discover yours together.
           </p>
           <Link
-            href="/about"
+            href="/about#contact"
             className="inline-block bg-green-1 text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
           >
             Work With Us
