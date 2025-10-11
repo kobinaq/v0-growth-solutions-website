@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-deep text-neutral py-24 md:py-32">
+      <section className="bg-[#056f39] text-white py-24 md:py-32">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             Real impact.
@@ -24,54 +24,62 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 md:py-28 bg-neutral">
-        <div className="container mx-auto px-6">
-          <div className="space-y-24">
-            {projects.map((project, index) => (
-              <article key={project.slug} className="group">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                  {/* Image */}
-                  <div className={`${index % 2 === 1 ? "md:order-2" : ""}`}>
-                    <div className="aspect-[4/3] bg-deep/10 overflow-hidden">
-                      <img
-                        src={project.gallery[0] || "/placeholder.svg"}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
+     <section className="py-20 md:py-28 bg-[#056f39] text-white">
+  <div className="container mx-auto px-6">
+    <div className="space-y-24">
+      {projects.map((project, index) => (
+        <article key={project.slug} className="group">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className={`${index % 2 === 1 ? "md:order-2" : ""}`}>
+              <div className="aspect-[4/3] bg-deep/10 overflow-hidden rounded-xl">
+                <img
+                  src={project.gallery[0] || "/placeholder.svg"}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
+              <div className="text-white/70 font-medium mb-4">
+                {project.focusArea} • {project.location}
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-white">
+                {project.title}
+              </h2>
+              <p className="text-lg text-white/80 mb-6 leading-relaxed">
+                {project.challenge}
+              </p>
+
+              {/* Metrics */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                {project.metrics.map((metric, i) => (
+                  <div key={i}>
+                    <div className="font-display text-3xl font-bold text-white mb-1">
+                      {metric.value}
+                    </div>
+                    <div className="text-sm text-white/70">
+                      {metric.label}
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  {/* Content */}
-                  <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
-                    <div className="text-green-1 font-medium mb-4">
-                      {project.focusArea} • {project.location}
-                    </div>
-                    <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-deep">{project.title}</h2>
-                    <p className="text-lg text-deep/80 mb-6 leading-relaxed">{project.challenge}</p>
-
-                    {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-6 mb-8">
-                      {project.metrics.map((metric, i) => (
-                        <div key={i}>
-                          <div className="font-display text-3xl font-bold text-green-1 mb-1">{metric.value}</div>
-                          <div className="text-sm text-deep/60">{metric.label}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className="inline-flex items-center gap-2 text-green-1 font-bold hover:gap-4 transition-all"
-                    >
-                      View Case Study →
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
+              <Link
+                href={`/projects/${project.slug}`}
+                className="inline-flex items-center gap-2 text-white font-bold hover:gap-4 transition-all"
+              >
+                View Case Study →
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-[#281f1f] text-white">
@@ -82,7 +90,7 @@ export default function ProjectsPage() {
           </p>
           <Link
             href="/about#contact"
-            className="inline-block bg-green-1 text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
+            className="inline-block bg-[#056f39] text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
           >
             Work With Us
           </Link>
