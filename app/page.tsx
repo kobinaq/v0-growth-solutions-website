@@ -12,9 +12,25 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 bg-gradient-to-br from-[#056f39] to-[#044d28]">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
+      <section
+        className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 bg-gradient-to-br from-[#056f39]/90 to-[#044d28]/90 text-white"
+      >
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/hero-bg.jpg')", // <-- put your image file in /public/hero-bg.jpg
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#056f39]/80 to-[#044d28]/80" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] tracking-tight">
             {homeData.hero.h1}
           </h1>
           <p className="text-xl md:text-2xl text-[#b3e88a] max-w-3xl mx-auto mb-12 leading-relaxed">
@@ -60,7 +76,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {homeData.processSteps.map((step) => (
               <div key={step.number} className="relative">
-                <div className="text-6xl font-bold text-[#b3e88a] mb-4">{step.number.toString().padStart(2, "0")}</div>
+                <div className="text-6xl font-bold text-[#b3e88a] mb-4">
+                  {step.number.toString().padStart(2, "0")}
+                </div>
                 <h3 className="text-2xl font-bold text-[#281f1f] mb-3">{step.title}</h3>
                 <p className="text-[#281f1f]/70 leading-relaxed">{step.summary}</p>
               </div>
