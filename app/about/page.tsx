@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-deep text-neutral py-24 md:py-32">
+      <section className="bg-[#056f39] text-white py-24 md:py-32">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             Building capacity.
