@@ -20,7 +20,7 @@ export default function AboutPage() {
       </section>
 
       {/* Ethos Section */}
-      <section className="py-20 md:py-28 bg-neutral">
+      <section id='contact' className="py-20 md:py-28 bg-neutral">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
