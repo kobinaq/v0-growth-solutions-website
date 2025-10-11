@@ -9,7 +9,7 @@
   "approach": "We conducted an energy audit and co-designed a solar solution with school administrators, teachers, and the parent-teacher association. We facilitated access to clean energy financing, supervised installation, and trained staff in system maintenance. We also integrated energy education into the school curriculum.",
   "outcomes": [
     "Installed 15kW solar system providing 100% daytime power needs",
-    "Reduced school energy costs by 78% annually [placeholder]",
+    "Reduced school energy costs by 78% annually",
     "Extended teaching hours by 3 hours daily with evening classes",
     "Enabled computer lab serving 400 students",
     "Created 2 local jobs for system maintenance"
@@ -22,7 +22,7 @@
     },
     {
       "value": "78%",
-      "label": "Energy Cost Reduction [placeholder]"
+      "label": "Energy Cost Reduction"
     },
     {
       "value": "15kW",
