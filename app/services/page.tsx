@@ -9,7 +9,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-deep text-neutral py-24 md:py-32">
+      <section className="bg-[#056f39] text-white py-24 md:py-32">
         <div className="container mx-auto px-6">
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             Services that
@@ -24,7 +24,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List */}
-      <section className="py-20 md:py-28 bg-neutral">
+      <section className="py-20 md:py-28 bg-[#056f39]">
         <div className="container mx-auto px-6">
           <div className="space-y-20">
             {services.map((service, index) => (
@@ -84,7 +84,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/about#contact"
-            className="inline-block bg-green-1 text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
+            className="inline-block bg-[#056f39] text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
           >
             Contact Us
           </Link>
