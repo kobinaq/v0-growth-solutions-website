@@ -24,7 +24,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List */}
-      <section className="py-20 md:py-28 bg-[#056f39]">
+      <section className="py-20 md:py-28 bg-[#056f39] text-white">
         <div className="container mx-auto px-6">
           <div className="space-y-20">
             {services.map((service, index) => (
