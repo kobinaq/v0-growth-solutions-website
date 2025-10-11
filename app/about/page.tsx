@@ -19,8 +19,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Ethos Section */}
-      <section id='contact' className="py-20 md:py-28 bg-neutral">
+      {/* Ethos Section (no id here) */}
+      <section className="py-20 md:py-28 bg-neutral">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
@@ -32,7 +32,9 @@ export default function AboutPage() {
               <ul className="space-y-4">
                 {aboutData.guidingPrinciples.map((principle, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-green-1 text-xl">→</span>
+                    <span className="text-white/90 bg-green-1 rounded-full w-7 h-7 flex items-center justify-center text-sm">
+                      →
+                    </span>
                     <span className="text-deep/80">{principle}</span>
                   </li>
                 ))}
@@ -50,27 +52,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 md:py-28 bg-neutral">
+      {/* Team Section — green background, white text, rounded images */}
+      <section className="py-20 md:py-28 bg-[#056f39] text-white">
         <div className="container mx-auto px-6">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-deep">Meet the Team</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16">Meet the Team</h2>
           <div className="grid md:grid-cols-3 gap-12">
             {teamMembers.map((member) => (
               <div key={member.name} className="group">
-                <div className="aspect-square bg-deep/5 mb-6 overflow-hidden">
+                <div className="aspect-square bg-white/5 mb-6 overflow-hidden rounded-2xl">
                   <img
                     src={member.headshotPath || "/placeholder.svg"}
                     alt={member.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2 text-deep">{member.name}</h3>
-                <p className="text-green-1 font-medium mb-4">{member.role}</p>
-                <p className="text-deep/70 text-sm leading-relaxed mb-4">{member.bio}</p>
+
+                <h3 className="font-display text-2xl font-bold mb-2 text-white">{member.name}</h3>
+                <p className="text-white/90 font-medium mb-4">{member.role}</p>
+                <p className="text-white/85 text-sm leading-relaxed mb-4">{member.bio}</p>
+
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
-                    className="text-green-1 hover:text-deep transition-colors text-sm font-medium"
+                    className="inline-block text-white/95 hover:text-white transition-colors text-sm font-medium"
                   >
                     Contact →
                   </a>
@@ -95,8 +99,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 md:py-28 bg-[#281f1f] text-white">
+      {/* Contact CTA — MOVE THE ID HERE so /about#contact goes to the form */}
+      <section id="contact" className="py-20 md:py-28 bg-[#281f1f] text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
