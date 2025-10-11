@@ -83,8 +83,8 @@ export default function ServicesPage() {
             Let's discuss how our services can support your community development goals.
           </p>
           <Link
-            href="/about"
-            className="inline-block bg-white text-green-1 px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
+            href="/about#contact"
+            className="inline-block bg-green-1 text-white px-12 py-4 text-lg font-bold hover:bg-neutral transition-colors"
           >
             Contact Us
           </Link>
