@@ -36,7 +36,6 @@
     ],
     "gallery": ["/assets/projects/project2-1.jpg", "/assets/projects/project2-2.jpg"],
     "metrics": [
-      { "value": "€20.6M", "label": "Programme Value" },
       { "value": "100+", "label": "MSMEs Coached" },
       { "value": "250", "label": "Green Jobs Facilitated" }
     ]
