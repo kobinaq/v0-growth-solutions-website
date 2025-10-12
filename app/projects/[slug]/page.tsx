@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import projects from "@/content/all-projects.json"
+import projects from "@/content/projects/all-projects.json"
 
 export function generateStaticParams() {
   return projects.map((project: any) => ({
