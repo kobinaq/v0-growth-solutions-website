@@ -10,6 +10,8 @@ export const metadata = {
 }
 
 export default function HomePage() {
+  const featuredProject = projectsData[0]
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -98,8 +100,8 @@ export default function HomePage() {
               <div>
                 <div className="aspect-[4/3] bg-[#281f1f]/10 overflow-hidden rounded-xl">
                   <img
-                    src={projectsData[0].gallery?.[0] || "/placeholder.svg"}
-                    alt={projectsData[0].title}
+                    src={featuredProject.gallery?.[0] || "/placeholder.svg"}
+                    alt={featuredProject.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -108,19 +110,19 @@ export default function HomePage() {
               {/* Content */}
               <div>
                 <div className="text-[#056f39] font-medium mb-4">
-                  {projectsData[0].focusArea} • {projectsData[0].location}
+                  {featuredProject.focusArea} • {featuredProject.location}
                 </div>
                 <h3 className="font-display text-3xl md:text-4xl font-bold mb-6 text-[#281f1f]">
-                  {projectsData[0].title}
+                  {featuredProject.title}
                 </h3>
                 <p className="text-lg text-[#281f1f]/80 mb-6 leading-relaxed">
-                  {projectsData[0].challenge}
+                  {featuredProject.challenge}
                 </p>
 
                 {/* Metrics */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                  {projectsData[0].metrics?.map((metric, i) => (
-                    <div key={`${metric.label}-${i}`}>
+                  {featuredProject.metrics?.map((metric) => (
+                    <div key={metric.label}>
                       <div className="font-display text-3xl font-bold text-[#056f39] mb-1">
                         {metric.value}
                       </div>
@@ -130,7 +132,7 @@ export default function HomePage() {
                 </div>
 
                 <Link
-                  href={`/projects/${projectsData[0].slug}`}
+                  href={`/projects/${featuredProject.slug}`}
                   className="inline-flex items-center gap-2 text-[#056f39] font-bold hover:gap-4 transition-all"
                 >
                   View Case Study →
