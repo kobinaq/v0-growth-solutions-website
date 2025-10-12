@@ -54,7 +54,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       </section>
 
       {/* Gallery */}
-      <section className="py-12 bg-neutral">
+      <section className="py-12 bg-[#056f39]">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             {(project.gallery && project.gallery.length > 0 ? project.gallery : ["/placeholder.svg"]).map(
