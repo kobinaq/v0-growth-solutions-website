@@ -92,57 +92,52 @@ export default function HomePage() {
       <section className="py-24 px-6 bg-[#e1eddf]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-[#281f1f] mb-16 text-center">Featured Project</h2>
-          {(() => {
-            const featuredProject = projectsData[0]
-            return (
-              <article className="group">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                  {/* Image */}
-                  <div>
-                    <div className="aspect-[4/3] bg-[#281f1f]/10 overflow-hidden rounded-xl">
-                      <img
-                        src={featuredProject.gallery?.[0] || "/placeholder.svg"}
-                        alt={featuredProject.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div>
-                    <div className="text-[#056f39] font-medium mb-4">
-                      {featuredProject.focusArea} • {featuredProject.location}
-                    </div>
-                    <h3 className="font-display text-3xl md:text-4xl font-bold mb-6 text-[#281f1f]">
-                      {featuredProject.title}
-                    </h3>
-                    <p className="text-lg text-[#281f1f]/80 mb-6 leading-relaxed">
-                      {featuredProject.challenge}
-                    </p>
-
-                    {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-6 mb-8">
-                      {featuredProject.metrics?.map((metric, i) => (
-                        <div key={i}>
-                          <div className="font-display text-3xl font-bold text-[#056f39] mb-1">
-                            {metric.value}
-                          </div>
-                          <div className="text-sm text-[#281f1f]/70">{metric.label}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <Link
-                      href={`/projects/${featuredProject.slug}`}
-                      className="inline-flex items-center gap-2 text-[#056f39] font-bold hover:gap-4 transition-all"
-                    >
-                      View Case Study →
-                    </Link>
-                  </div>
+          <article className="group">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image */}
+              <div>
+                <div className="aspect-[4/3] bg-[#281f1f]/10 overflow-hidden rounded-xl">
+                  <img
+                    src={projectsData[0].gallery?.[0] || "/placeholder.svg"}
+                    alt={projectsData[0].title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
-              </article>
-            )
-          })()}
+              </div>
+
+              {/* Content */}
+              <div>
+                <div className="text-[#056f39] font-medium mb-4">
+                  {projectsData[0].focusArea} • {projectsData[0].location}
+                </div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-6 text-[#281f1f]">
+                  {projectsData[0].title}
+                </h3>
+                <p className="text-lg text-[#281f1f]/80 mb-6 leading-relaxed">
+                  {projectsData[0].challenge}
+                </p>
+
+                {/* Metrics */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                  {projectsData[0].metrics?.map((metric, i) => (
+                    <div key={`${metric.label}-${i}`}>
+                      <div className="font-display text-3xl font-bold text-[#056f39] mb-1">
+                        {metric.value}
+                      </div>
+                      <div className="text-sm text-[#281f1f]/70">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href={`/projects/${projectsData[0].slug}`}
+                  className="inline-flex items-center gap-2 text-[#056f39] font-bold hover:gap-4 transition-all"
+                >
+                  View Case Study →
+                </Link>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
