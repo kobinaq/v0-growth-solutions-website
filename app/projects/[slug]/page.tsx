@@ -112,7 +112,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-deep">Ready for similar impact?</h2>
           <Link
-            href="/about"
+            href="/about#contact"
             className="inline-block bg-[#056f39] text-white px-12 py-4 text-lg font-bold hover:bg-deep transition-colors"
           >
             Let's Talk
