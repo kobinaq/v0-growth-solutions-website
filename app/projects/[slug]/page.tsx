@@ -1,19 +1,15 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import adaWater from "@/content/projects/ada-community-water.json"
-import solarSchool from "@/content/projects/solar-school-accra.json"
-import agroforestry from "@/content/projects/agroforestry-livelihoods.json"
-
-const projects = [adaWater, solarSchool, agroforestry]
+import projects from "@/content/all-projects.json"
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
+  return projects.map((project: any) => ({
     slug: project.slug,
   }))
 }
 
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug)
+  const project = projects.find((p: any) => p.slug === params.slug)
 
   if (!project) {
     notFound()
@@ -38,7 +34,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
           {/* Metrics */}
           <div className="grid grid-cols-3 gap-8 max-w-3xl">
-            {project.metrics.map((metric, i) => (
+            {project.metrics?.map((metric: any, i: number) => (
               <div key={i}>
                 <div className="font-display text-4xl md:text-5xl font-bold text-green-2 mb-2">{metric.value}</div>
                 <div className="text-neutral/80 text-sm">{metric.label}</div>
@@ -52,7 +48,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       <section className="py-12 bg-neutral">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            {project.gallery.map((image, i) => (
+            {project.gallery?.map((image: string, i: number) => (
               <div key={i} className="aspect-[4/3] bg-deep/10 overflow-hidden">
                 <img
                   src={image || "/placeholder.svg"}
@@ -60,7 +56,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   className="w-full h-full object-cover"
                 />
               </div>
-            ))}
+            )) ?? (
+              <div className="aspect-[4/3] bg-deep/10 overflow-hidden">
+                <img src="/placeholder.svg" alt={`${project.title} - placeholder`} className="w-full h-full object-cover" />
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         <div className="container mx-auto px-6">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-12 text-deep">Outcomes & Impact</h2>
           <ul className="space-y-6 max-w-4xl">
-            {project.outcomes.map((outcome, i) => (
+            {project.outcomes?.map((outcome: string, i: number) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="text-green-1 text-2xl font-bold">{i + 1}.</span>
                 <span className="text-lg text-deep/80 pt-1">{outcome}</span>
