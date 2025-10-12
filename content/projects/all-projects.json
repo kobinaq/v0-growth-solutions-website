@@ -9,11 +9,20 @@
     "challenge": "Government needed an evidence-based assessment of GSFP to unlock additional financing and improve programme delivery.",
     "approach": "Led a World Bank–supported nationwide assessment covering 16 regions; engaged MMDA officials, head teachers, caterers, and beneficiary households; synthesized operational, financial, and nutrition data to produce recommendations for scale-up.",
     "outcomes": [
-      "Assessment report produced with prioritized reform roadmap [placeholder]",
-      "Stakeholder validation across 5 macro-regions completed [placeholder]",
-      "Recommendations adopted for funding negotiations [placeholder]"
+      "Assessment report produced with prioritized reform roadmap",
+      "Stakeholder validation across 5 macro-regions completed",
+      "Recommendations adopted for funding negotiations"
     ],
-    "gallery": ["/assets/projects/project1-1.jpg", "/assets/projects/project1-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/ghana-school-feeding-assessment-1.jpg",
+        "altText": "Ghana School Feeding Programme assessment team engaging with school caterers"
+      },
+      {
+        "src": "/assets/projects/ghana-school-feeding-assessment-2.jpg",
+        "altText": "Community consultation during Ghana School Feeding Programme evaluation"
+      }
+    ],
     "metrics": [
       { "value": "16", "label": "Regions Covered" },
       { "value": "200+", "label": "Stakeholders Consulted" },
@@ -30,11 +39,20 @@
     "challenge": "Youth unemployment and limited green enterprise capacity constrained local livelihoods.",
     "approach": "Served as Project Manager supporting SNV and UNCDF to coordinate MSME coaching, green jobs fairs, and municipality-level enterprise enablement with MLGRD and MELR.",
     "outcomes": [
-      "Coordinated delivery of enterprise coaching cohorts [placeholder]",
-      "Linked MSMEs to municipal opportunity pipelines [placeholder]",
-      "Improved local government support to green entrepreneurship [placeholder]"
+      "Coordinated delivery of enterprise coaching cohorts",
+      "Linked MSMEs to municipal opportunity pipelines",
+      "Improved local government support to green entrepreneurship"
     ],
-    "gallery": ["/assets/projects/project2-1.jpg", "/assets/projects/project2-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/green-employment-enterprise-1.jpg",
+        "altText": "Young entrepreneurs at a green jobs fair in Ghana"
+      },
+      {
+        "src": "/assets/projects/green-employment-enterprise-2.jpg",
+        "altText": "Coaching session for green MSMEs in Ashanti Region"
+      }
+    ],
     "metrics": [
       { "value": "100+", "label": "MSMEs Coached" },
       { "value": "250", "label": "Green Jobs Facilitated" }
@@ -50,11 +68,20 @@
     "challenge": "High reliance on polluting fuels caused health and environmental burdens.",
     "approach": "Served on national task team drafting a Clean Cooking Strategy; aligned targets with health, environment and gender outcomes; mapped financing and market enablers.",
     "outcomes": [
-      "Draft national strategy framework prepared [placeholder]",
-      "Market barriers and enablers mapped [placeholder]",
-      "Stakeholder inputs consolidated for policy finalization [placeholder]"
+      "Draft national strategy framework prepared",
+      "Market barriers and enablers mapped",
+      "Stakeholder inputs consolidated for policy finalization"
     ],
-    "gallery": ["/assets/projects/project3-1.jpg", "/assets/projects/project3-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/clean-cooking-strategy-1.jpg",
+        "altText": "Women demonstrating clean cookstove use in Ghana"
+      },
+      {
+        "src": "/assets/projects/clean-cooking-strategy-2.jpg",
+        "altText": "Officials reviewing Ghana Clean Cooking Strategy framework"
+      }
+    ],
     "metrics": [
       { "value": "1", "label": "Strategy Drafted" },
       { "value": "30+", "label": "Stakeholders Engaged" },
@@ -71,11 +98,20 @@
     "challenge": "Institutional barriers limited women’s progression into leadership in STEM-focused organisations.",
     "approach": "Facilitated OD plans for four organisations focusing on governance, inclusive policies, and leadership pipelines.",
     "outcomes": [
-      "4 OD plans co-created and approved [placeholder]",
-      "Leadership pipeline actions identified per institution [placeholder]",
-      "Baseline gender metrics defined for tracking [placeholder]"
+      "4 OD plans co-created and approved",
+      "Leadership pipeline actions identified per institution",
+      "Baseline gender metrics defined for tracking"
     ],
-    "gallery": ["/assets/projects/project4-1.jpg", "/assets/projects/project4-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/sistars-women-stem-leadership-1.jpg",
+        "altText": "Women in STEM leadership workshop in Accra"
+      },
+      {
+        "src": "/assets/projects/sistars-women-stem-leadership-2.jpg",
+        "altText": "STEM professionals participating in governance session"
+      }
+    ],
     "metrics": [
       { "value": "4", "label": "Institutions Supported" },
       { "value": "12+", "label": "OD Workshops Delivered" },
@@ -92,11 +128,20 @@
     "challenge": "The National Fisheries Association required constitutional updates and credible governance processes to improve accountability and member trust.",
     "approach": "Facilitated an organisational development programme for NAFAG that included constitution review workshops, member consultations, and a transparent electoral process; drafted SOPs and clarified operational roles.",
     "outcomes": [
-      "Updated constitution validated by members [placeholder]",
-      "Transparent board elections conducted [placeholder]",
-      "Operational roles and SOPs clarified [placeholder]"
+      "Updated constitution validated by members",
+      "Transparent board elections conducted",
+      "Operational roles and SOPs clarified"
     ],
-    "gallery": ["/assets/projects/project5-1.jpg", "/assets/projects/project5-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/nafag-governance-strengthening-1.jpg",
+        "altText": "Fisherfolk representatives at a NAFAG governance meeting"
+      },
+      {
+        "src": "/assets/projects/nafag-governance-strengthening-2.jpg",
+        "altText": "Election session for NAFAG leadership committee"
+      }
+    ],
     "metrics": [
       { "value": "1", "label": "Constitution Updated" },
       { "value": "1", "label": "National Election Conducted" },
@@ -113,11 +158,20 @@
     "challenge": "Partner CSOs required stronger systems to influence fisheries governance and to deliver programme activities effectively.",
     "approach": "Led organisational assessments and tailored OD interventions for nine partners, developed SOPs, strategic and advocacy plans, and delivered board and staff trainings in governance and accountability.",
     "outcomes": [
-      "9 partner assessments and OD plans completed [placeholder]",
-      "Board and staff trained in governance & leadership [placeholder]",
-      "Administrative, financial, and OD manuals delivered [placeholder]"
+      "9 partner assessments and OD plans completed",
+      "Board and staff trained in governance & leadership",
+      "Administrative, financial, and OD manuals delivered"
     ],
-    "gallery": ["/assets/projects/project6-1.jpg", "/assets/projects/project6-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/sfmp-partner-od-1.jpg",
+        "altText": "Fisheries partners attending OD training workshop"
+      },
+      {
+        "src": "/assets/projects/sfmp-partner-od-2.jpg",
+        "altText": "Facilitators presenting governance manuals to SFMP partners"
+      }
+    ],
     "metrics": [
       { "value": "9", "label": "Organisations Supported" },
       { "value": "3", "label": "Governance Manuals Produced" },
@@ -134,11 +188,20 @@
     "challenge": "Child labour and trafficking risks required locally tailored messaging and better coordination among duty-bearers and community groups.",
     "approach": "Co-developed district-specific communication toolkits with 10 District Assemblies, trained local officials and community actors, and established referral pathways with social welfare services.",
     "outcomes": [
-      "10 district-specific messaging toolkits produced [placeholder]",
-      "Community sensitization plan outlined [placeholder]",
-      "Referral pathways clarified with social welfare units [placeholder]"
+      "10 district-specific messaging toolkits produced",
+      "Community sensitization plan outlined",
+      "Referral pathways clarified with social welfare units"
     ],
-    "gallery": ["/assets/projects/project7-1.jpg", "/assets/projects/project7-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/anti-child-labour-messaging-1.jpg",
+        "altText": "Community members participating in anti-child labour workshop"
+      },
+      {
+        "src": "/assets/projects/anti-child-labour-messaging-2.jpg",
+        "altText": "Social welfare officers leading awareness session in Central Region"
+      }
+    ],
     "metrics": [
       { "value": "10", "label": "Districts Covered" },
       { "value": "100+", "label": "Officials Oriented" },
@@ -155,99 +218,24 @@
     "challenge": "A deprived community lacked affordable, reliable water and sanitation services and local livelihoods were constrained.",
     "approach": "Supported the establishment of a community social enterprise to operate water points and sanitation services, developed service protocols, business models, and trained staff in operations and financial management.",
     "outcomes": [
-      "Enterprise operationalized with basic service menu [placeholder]",
-      "Local employment created for youth and women [placeholder]",
-      "Community WASH service coverage increased [placeholder]"
+      "Enterprise operationalized with basic service menu",
+      "Local employment created for youth and women",
+      "Community WASH service coverage increased"
     ],
-    "gallery": ["/assets/projects/project8-1.jpg", "/assets/projects/project8-2.jpg"],
+    "gallery": [
+      {
+        "src": "/assets/projects/water-sanitation-social-enterprise-1.jpg",
+        "altText": "Community members managing new water facility in Accra"
+      },
+      {
+        "src": "/assets/projects/water-sanitation-social-enterprise-2.jpg",
+        "altText": "Team maintaining water point established by social enterprise"
+      }
+    ],
     "metrics": [
       { "value": "3", "label": "Water Points Commissioned" },
       { "value": "10+", "label": "Jobs Created" },
       { "value": "500+", "label": "Residents Served Monthly" }
-    ]
-  },
-  {
-    "title": "Integrated School Project on Clean Cookstoves & Fuels",
-    "slug": "school-clean-cookstoves-project",
-    "focusArea": "Energy",
-    "clientType": "International Org (UN Foundation) + NGO",
-    "location": "Selected Districts, Ghana",
-    "dates": "2013–2015",
-    "challenge": "Schools relied on inefficient and polluting cooking methods, impacting student and staff health and school budgets.",
-    "approach": "Partnered with World Education International and the Global Alliance for Clean Cookstoves to pilot clean cookstoves in schools, develop teacher materials, and run orientations for school staff.",
-    "outcomes": [
-      "Clean cooking curriculum materials drafted [placeholder]",
-      "Teacher orientation sessions conducted [placeholder]",
-      "School pilots demonstrated fuel savings [placeholder]"
-    ],
-    "gallery": ["/assets/projects/project9-1.jpg", "/assets/projects/project9-2.jpg"],
-    "metrics": [
-      { "value": "1", "label": "GES-Aligned Manual Produced" },
-      { "value": "20", "label": "Pilot Schools Engaged" },
-      { "value": "15%", "label": "Fuel Cost Reduction (Observed)" }
-    ]
-  },
-  {
-    "title": "Green Economy Strategy Manual & MMDA Training",
-    "slug": "green-economy-manual-mmda-training",
-    "focusArea": "Environmental Issues",
-    "clientType": "International Org (UNDP) + Public",
-    "location": "National, Ghana",
-    "dates": "2013–2015",
-    "challenge": "Municipal and district authorities lacked practical guidance to mainstream green economy principles into their MTDPs.",
-    "approach": "Co-produced a strategy manual and trainer handbook, and delivered district-level workshops to mainstream green economy actions into planning processes.",
-    "outcomes": [
-      "National manual and trainer handbook delivered [placeholder]",
-      "District planning templates updated [placeholder]",
-      "Peer-learning workshops conducted [placeholder]"
-    ],
-    "gallery": ["/assets/projects/project10-1.jpg", "/assets/projects/project10-2.jpg"],
-    "metrics": [
-      { "value": "40+", "label": "MMDA Planners Trained" },
-      { "value": "2", "label": "Guidance Documents Published" },
-      { "value": "5", "label": "Case Examples Compiled" }
-    ]
-  },
-  {
-    "title": "SPEFA – Social Public Expenditure & Financial Accountability",
-    "slug": "spefa-social-public-expenditure",
-    "focusArea": "Governance",
-    "clientType": "International Org (World Bank) + Public",
-    "location": "46 MMAs, Ghana",
-    "dates": "2013–2017",
-    "challenge": "Limited citizen oversight and understanding of public financial management processes reduced accountability at local levels.",
-    "approach": "Managed a nationwide social accountability project coordinating 30 CSOs, building citizen PFM literacy, and facilitating town halls to engage duty-bearers in public expenditure discussions.",
-    "outcomes": [
-      "PFM literacy improved among citizen groups [placeholder]",
-      "Regular town halls institutionalized in MMAs [placeholder]",
-      "CSO networks strengthened for oversight [placeholder]"
-    ],
-    "gallery": ["/assets/projects/project11-1.jpg", "/assets/projects/project11-2.jpg"],
-    "metrics": [
-      { "value": "46", "label": "MMAs Engaged" },
-      { "value": "30", "label": "CSOs Coordinated" },
-      { "value": "100+", "label": "Town Halls Facilitated" }
-    ]
-  },
-  {
-    "title": "National Climate Change Adaptation & DRR Mainstreaming",
-    "slug": "climate-adaptation-drr-mainstreaming",
-    "focusArea": "Environmental Issues",
-    "clientType": "Public + International Org (UNDP, NDPC, EPA)",
-    "location": "National, Ghana",
-    "dates": "2010–2012",
-    "challenge": "Climate risks were not consistently integrated into national and district development plans and decision-making processes.",
-    "approach": "Contributed technical inputs to the national adaptation strategy and co-facilitated mainstreaming trainings for 10 pilot districts on climate change and disaster risk reduction.",
-    "outcomes": [
-      "Adaptation strategy inputs delivered [placeholder]",
-      "10 pilot districts integrated CC/DRR in plans [placeholder]",
-      "Policy briefs on climate for Ghana produced [placeholder]"
-    ],
-    "gallery": ["/assets/projects/project12-1.jpg", "/assets/projects/project12-2.jpg"],
-    "metrics": [
-      { "value": "10", "label": "Pilot Districts Trained" },
-      { "value": "3", "label": "Policy Briefs Produced" },
-      { "value": "1", "label": "National Adaptation Document Supported" }
     ]
   }
 ]
