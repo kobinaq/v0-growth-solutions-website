@@ -52,29 +52,29 @@
   ],
   "focusAreas": [
     {
-      "title": "Environmental Solutions",
-      "slug": "environment",
-      "short": "Building community capacity for comprehensive environmental problem-solving and natural resource management."
+      "title": "Organizational Development",
+      "slug": "organizational-development",
+      "short": "Strengthening the capacity, leadership, and systems of community organizations to improve effectiveness, accountability, and long-term sustainability."
     },
     {
-      "title": "Clean Energy",
-      "slug": "energy",
-      "short": "Promoting efficient, clean energy methods that consider socio-economic and cultural contexts."
+      "title": "Energy and Green Transition",
+      "slug": "energy-green-transition",
+      "short": "Advancing access to clean, affordable, and renewable energy solutions while supporting communities to adapt to a low-carbon future."
     },
     {
-      "title": "Livelihood Development",
-      "slug": "livelihood",
-      "short": "Creating economic opportunities by adding value to local resources and comparative advantages."
-    },
-    {
-      "title": "Gender Equality",
-      "slug": "gender",
-      "short": "Building organizational capacity for gender mainstreaming through training, research, and facilitation."
-    },
-    {
-      "title": "Good Governance",
+      "title": "Governance",
       "slug": "governance",
-      "short": "Strengthening organizations with effective governance techniques, leadership development, and systems."
+      "short": "Promoting transparent, participatory, and inclusive governance structures that empower communities to make informed decisions and manage local resources responsibly."
+    },
+    {
+      "title": "Gender and Social Inclusion",
+      "slug": "gender-social-inclusion",
+      "short": "Mainstreaming gender equity and social inclusion across all programs to ensure equal opportunities, representation, and outcomes for marginalized groups."
+    },
+    {
+      "title": "Environment",
+      "slug": "environment",
+      "short": "Supporting sustainable management of natural resources, biodiversity conservation, and climate resilience through community-led environmental stewardship."
     }
   ],
   "featuredProjectSlug": "ada-community-water",
