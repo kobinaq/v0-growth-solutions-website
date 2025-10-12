@@ -8,11 +8,20 @@ export function generateStaticParams() {
   }))
 }
 
+type GalleryItem = string | { src?: string; altText?: string }
+
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p: any) => p.slug === params.slug)
 
   if (!project) {
     notFound()
+  }
+
+  // Helper to normalise gallery entries
+  const resolveImage = (item: GalleryItem) => {
+    if (!item) return { src: "/placeholder.svg", alt: `${project.title} image` }
+    if (typeof item === "string") return { src: item, alt: `${project.title} image` }
+    return { src: item.src ?? "/placeholder.svg", alt: item.altText ?? `${project.title} image` }
   }
 
   return (
@@ -48,18 +57,20 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       <section className="py-12 bg-neutral">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            {project.gallery?.map((image: string, i: number) => (
-              <div key={i} className="aspect-[4/3] bg-deep/10 overflow-hidden">
-                <img
-                  src={image || "/placeholder.svg"}
-                  alt={`${project.title} - Image ${i + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )) ?? (
-              <div className="aspect-[4/3] bg-deep/10 overflow-hidden">
-                <img src="/placeholder.svg" alt={`${project.title} - placeholder`} className="w-full h-full object-cover" />
-              </div>
+            {(project.gallery && project.gallery.length > 0 ? project.gallery : ["/placeholder.svg"]).map(
+              (image: GalleryItem, i: number) => {
+                const { src, alt } = resolveImage(image)
+                return (
+                  <div key={i} className="aspect-[4/3] bg-deep/10 overflow-hidden rounded-md">
+                    <img
+                      src={src}
+                      alt={alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )
+              }
             )}
           </div>
         </div>
