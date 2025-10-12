@@ -27,7 +27,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-deep text-neutral py-24 md:py-32">
+      <section className="bg-[#056f39] text-white py-24 md:py-32">
         <div className="container mx-auto px-6">
           <div className="mb-8">
             <Link href="/projects" className="text-neutral/70 hover:text-neutral transition-colors">
@@ -93,7 +93,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       </section>
 
       {/* Outcomes */}
-      <section className="py-20 md:py-28 bg-neutral">
+      <section className="py-20 md:py-28 bg-[#056f39] text-white">
         <div className="container mx-auto px-6">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-12 text-deep">Outcomes & Impact</h2>
           <ul className="space-y-6 max-w-4xl">
@@ -107,30 +107,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      {/* Testimonial */}
-      {project.testimonial && (
-        <section className="py-20 md:py-28 bg-green-1 text-white">
-          <div className="container mx-auto px-6">
-            <blockquote className="max-w-4xl mx-auto">
-              <p className="font-display text-2xl md:text-3xl font-bold mb-8 leading-relaxed">
-                "{project.testimonial.quote}"
-              </p>
-              <footer>
-                <div className="font-bold">{project.testimonial.author}</div>
-                <div className="text-white/80">{project.testimonial.role}</div>
-              </footer>
-            </blockquote>
-          </div>
-        </section>
-      )}
-
       {/* CTA */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-deep">Ready for similar impact?</h2>
           <Link
             href="/about"
-            className="inline-block bg-green-1 text-white px-12 py-4 text-lg font-bold hover:bg-deep transition-colors"
+            className="inline-block bg-[#056f39] text-white px-12 py-4 text-lg font-bold hover:bg-deep transition-colors"
           >
             Let's Talk
           </Link>
