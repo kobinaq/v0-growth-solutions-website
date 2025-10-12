@@ -31,7 +31,7 @@ export default function ProjectsPage() {
                   <div className={`${index % 2 === 1 ? "md:order-2" : ""}`}>
                     <div className="aspect-[4/3] bg-deep/10 overflow-hidden rounded-xl">
                       <img
-                        src={project.gallery?.[0] || "/placeholder.svg"}
+                        src={project.gallery || "/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
