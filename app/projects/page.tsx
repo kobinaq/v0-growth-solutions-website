@@ -35,7 +35,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects by Focus Area */}
-      <section className="py-20 md:py-28 bg-[#e1eddf] text-[#281f1f]">
+      <section className="py-20 md:py-28 bg-[#ffffff] text-[#281f1f]">
         <div className="container mx-auto px-6 space-y-20">
           {grouped.map(({ focus, items }) => (
             <div key={focus}>
