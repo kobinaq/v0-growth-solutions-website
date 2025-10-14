@@ -1,8 +1,8 @@
 import aboutData from "@/content/about.json"
 import sarahData from "@/content/team/sarah-naa-dedei.json"
-import kwameData from "@/content/team/kwame-mensah.json"
+import maxwellData from "@/content/team/maxwell-bentil.json"
 
-const teamMembers = [sarahData, kwameData]
+const teamMembers = [sarahData, maxwellData]
 
 export default function AboutPage() {
   return (
