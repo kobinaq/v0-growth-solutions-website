@@ -18,27 +18,27 @@
     },
     {
       "name": "USAID",
-      "logoPath": "/assets/partners/usaid.svg",
+      "logoPath": "/assets/partners/usaid.jpg",
       "url": "https://usaid.gov"
     },
     {
       "name": "UNDP Ghana",
-      "logoPath": "/assets/partners/undp.svg",
+      "logoPath": "/assets/partners/undp.jpg",
       "url": "https://undp.org"
     },
     {
       "name": "World Bank",
-      "logoPath": "/assets/partners/worldbank.svg",
+      "logoPath": "/assets/partners/worldbank.jpg",
       "url": "https://worldbank.org"
     },
     {
       "name": "Government of Netherlands",
-      "logoPath": "/assets/partners/netherlands.svg",
+      "logoPath": "/assets/partners/netherlands.jpg",
       "url": "#"
     },
     {
       "name": "DFID",
-      "logoPath": "/assets/partners/dfid.svg",
+      "logoPath": "/assets/partners/dfid.jpg",
       "url": "#"
     }
   ]
