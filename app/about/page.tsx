@@ -60,11 +60,11 @@ export default function AboutPage() {
             {teamMembers.map((member) => (
               <div key={member.name} className="group">
                 <div className="aspect-square bg-white/5 mb-6 overflow-hidden rounded-2xl">
-                  <img
-                    src={member.headshotPath || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+                    <img 
+                      src={member.headshotPath || "/placeholder.svg"} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+                      />
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-2 text-white">{member.name}</h3>
                 <p className="text-white/90 font-medium mb-4">{member.role}</p>
