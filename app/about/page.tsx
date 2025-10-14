@@ -19,7 +19,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Ethos Section (no id here) */}
+      {/* Ethos Section */}
       <section className="py-20 md:py-28 bg-neutral">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -52,7 +52,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section — green background, white text, rounded images */}
+      {/* Team Section */}
       <section className="py-20 md:py-28 bg-[#056f39] text-white">
         <div className="container mx-auto px-6">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-16">Meet the Team</h2>
@@ -63,14 +63,12 @@ export default function AboutPage() {
                   <img
                     src={member.headshotPath || "/placeholder.svg"}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-
                 <h3 className="font-display text-2xl font-bold mb-2 text-white">{member.name}</h3>
                 <p className="text-white/90 font-medium mb-4">{member.role}</p>
                 <p className="text-white/85 text-sm leading-relaxed mb-4">{member.bio}</p>
-
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
@@ -86,7 +84,6 @@ export default function AboutPage() {
       </section>
 
       {/* Partners Section */}
-      
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-deep text-center">
@@ -99,13 +96,13 @@ export default function AboutPage() {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center p-4 group"
+                className="flex items-center justify-center p-4"
               >
                 {partner.logoPath ? (
                   <img
                     src={partner.logoPath}
                     alt={partner.name}
-                    className="w-28 h-auto object-contain mb-2""
+                    className="w-28 h-auto object-contain mb-2"
                   />
                 ) : (
                   <span className="text-deep/40 text-sm font-medium text-center">
@@ -118,8 +115,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-
-      {/* Contact CTA — MOVE THE ID HERE so /about#contact goes to the form */}
+      {/* Contact CTA */}
       <section id="contact" className="py-20 md:py-28 bg-[#281f1f] text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
