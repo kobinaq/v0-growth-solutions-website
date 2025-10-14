@@ -23,7 +23,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: siteData.siteTitle,
   description: siteData.metaDescription,
-    generator: 'v0.app'
+  icon: "@public/favicon.png",
 }
 
 export default function RootLayout({
