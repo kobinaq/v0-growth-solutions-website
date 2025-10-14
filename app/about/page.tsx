@@ -105,7 +105,7 @@ export default function AboutPage() {
                   <img
                     src={partner.logoPath}
                     alt={partner.name}
-                    className="h-12 md:h-16 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-28 h-auto object-contain mb-2""
                   />
                 ) : (
                   <span className="text-deep/40 text-sm font-medium text-center">
