@@ -237,5 +237,238 @@
       { "value": "10+", "label": "Jobs Created" },
       { "value": "500+", "label": "Residents Served Monthly" }
     ]
+  },
+  {
+    "title": "Social Public Expenditure & Financial Accountability (SPEFA) Project",
+    "slug": "social-public-expenditure-financial-accountability-spefa",
+    "focusArea": "Governance",
+    "clientType": "International Org (World Bank) + Public Sector",
+    "location": "46 Metropolitan & Municipal Assemblies, Ghana",
+    "dates": "2013–2017",
+    "challenge": "Limited citizen engagement and transparency in public financial management at local government level.",
+    "approach": "Coordinated a nationwide social accountability programme across 46 MMAs; trained 30 CSOs, organised town-hall meetings, and facilitated citizen engagement with state actors to improve public financial oversight.",
+    "outcomes": [
+      "Quarterly team-building and capacity sessions for 30 CSOs",
+      "Improved citizen engagement mechanisms in 46 assemblies",
+      "Advocacy actions that increased budget transparency"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/social-public-expenditure-financial-accountability-spefa-1.jpg",
+        "altText": "Social Public Expenditure & Financial Accountability (SPEFA) Project field session"
+      },
+      {
+        "src": "/assets/projects/social-public-expenditure-financial-accountability-spefa-2.jpg",
+        "altText": "Stakeholder engagement during SPEFA Project meeting"
+      }
+    ],
+    "metrics": [
+      { "value": "46", "label": "Assemblies Reached" },
+      { "value": "30", "label": "CSOs Trained" },
+      { "value": "Qtrly", "label": "Sustained Engagement" }
+    ]
+  },
+  {
+    "title": "Green Economy Strategy & Handbook (National)",
+    "slug": "green-economy-strategy-handbook",
+    "focusArea": "Environment",
+    "clientType": "International Org (UNDP)",
+    "location": "National, Ghana",
+    "dates": "2011–2013",
+    "challenge": "Mainstreaming green economy principles into national and local planning was limited by lack of practical guidance and capacity.",
+    "approach": "Developed a national Green Economy Strategy manual and trained MMDAs on mainstreaming green economy into MTDPs, accompanied by a trainers' handbook and capacity building sessions.",
+    "outcomes": [
+      "Green Economy strategy manual published",
+      "Trainers handbook produced and roll-out training delivered",
+      "MMDAs equipped to integrate green economy principles into plans"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/green-economy-strategy-handbook-1.jpg",
+        "altText": "Workshop session for Green Economy Strategy & Handbook (National)"
+      },
+      {
+        "src": "/assets/projects/green-economy-strategy-handbook-2.jpg",
+        "altText": "Participants reviewing Green Economy Strategy handbook materials"
+      }
+    ],
+    "metrics": [
+      { "value": "10", "label": "Pilot MMDAs Trained" },
+      { "value": "1", "label": "Strategy Manual Published" }
+    ]
+  },
+  {
+    "title": "Clean Cookstoves Education & Curriculum Integration",
+    "slug": "clean-cookstoves-curriculum-integration",
+    "focusArea": "Energy and Green Transition",
+    "clientType": "NGO + Education (GES)",
+    "location": "Selected districts, Ghana",
+    "dates": "2010–2014",
+    "challenge": "Lack of awareness and curriculum content on clean cooking and fuels for school-age children.",
+    "approach": "Worked with World Education International and partners to develop clean cookstoves manuals and integrate content into GES curriculum; trained teachers and delivered community outreach to adolescent girls and school networks.",
+    "outcomes": [
+      "Clean cookstoves training manual developed",
+      "Curriculum integration guidance delivered",
+      "Beneficiary training for adolescent girls and teachers"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/clean-cookstoves-curriculum-integration-1.jpg",
+        "altText": "Teachers receiving training for Clean Cookstoves Education & Curriculum Integration project"
+      },
+      {
+        "src": "/assets/projects/clean-cookstoves-curriculum-integration-2.jpg",
+        "altText": "Students engaged in clean cookstoves awareness session"
+      }
+    ],
+    "metrics": [
+      { "value": "200", "label": "Girls Trained" },
+      { "value": "1", "label": "Manual Published" }
+    ]
+  },
+  {
+    "title": "Ghana Alliance for Clean Cookstoves (GHACCO) — Set-up Support",
+    "slug": "ghana-alliance-clean-cookstoves-setup",
+    "focusArea": "Energy and Green Transition",
+    "clientType": "Consortium (Relief International, DAASGIFT, SNV)",
+    "location": "National, Ghana",
+    "dates": "2009–2012",
+    "challenge": "Fragmented clean cookstoves initiatives needed a national coordinating platform to scale adoption and market development.",
+    "approach": "Supported the establishment of GHACCO, coordinated stakeholder engagement, and contributed to partnership development and secretariat setup.",
+    "outcomes": [
+      "GHACCO established and governance arrangements defined",
+      "Partnerships formed across NGOs and private sector",
+      "Advocacy platforms created to promote clean cooking uptake"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/ghana-alliance-clean-cookstoves-setup-1.jpg",
+        "altText": "Stakeholder consultation for Ghana Alliance for Clean Cookstoves (GHACCO) — Set-up Support"
+      },
+      {
+        "src": "/assets/projects/ghana-alliance-clean-cookstoves-setup-2.jpg",
+        "altText": "Participants discussing clean cooking promotion during GHACCO launch"
+      }
+    ],
+    "metrics": [
+      { "value": "1", "label": "National Alliance Established" },
+      { "value": "3", "label": "Key Partners Onboarded" }
+    ]
+  },
+  {
+    "title": "Local Government Development Programme (LOGODEP) — Project Support",
+    "slug": "local-government-development-programme-logodep",
+    "focusArea": "Governance",
+    "clientType": "Public",
+    "location": "Western Region, Ghana (pilot)",
+    "dates": "2009–2011",
+    "challenge": "Initial set-up of a local government development programme required coordination and technical inputs for pilot implementation.",
+    "approach": "Provided technical support during pilot set-up, contributed to programme design and stakeholder coordination in the Western Region.",
+    "outcomes": [
+      "Pilot set-up completed",
+      "Stakeholder engagement framework established",
+      "Lessons documented for national roll-out"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/local-government-development-programme-logodep-1.jpg",
+        "altText": "Local Government Development Programme (LOGODEP) training session"
+      },
+      {
+        "src": "/assets/projects/local-government-development-programme-logodep-2.jpg",
+        "altText": "Stakeholders participating in LOGODEP pilot meeting"
+      }
+    ],
+    "metrics": [
+      { "value": "1", "label": "Region Piloted" },
+      { "value": "1", "label": "Pilot Report" }
+    ]
+  },
+  {
+    "title": "National Climate Change Adaptation Strategy — Contributor",
+    "slug": "national-climate-change-adaptation-strategy",
+    "focusArea": "Environment",
+    "clientType": "Government + UNDP",
+    "location": "National, Ghana",
+    "dates": "2008–2010",
+    "challenge": "Need for a coordinated national strategy for climate adaptation and disaster risk reduction.",
+    "approach": "Contributed to strategy development, policy briefs and training pilots for District Assemblies on mainstreaming climate change into development planning.",
+    "outcomes": [
+      "Strategy inputs provided and pilots implemented",
+      "Policy briefs and training materials developed",
+      "District-level mainstreaming demonstrated in pilot areas"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/national-climate-change-adaptation-strategy-1.jpg",
+        "altText": "Workshop for National Climate Change Adaptation Strategy — Contributor project"
+      },
+      {
+        "src": "/assets/projects/national-climate-change-adaptation-strategy-2.jpg",
+        "altText": "Group discussion on climate change adaptation framework"
+      }
+    ],
+    "metrics": [
+      { "value": "10", "label": "District Pilots" },
+      { "value": "1", "label": "Strategy Document Contribution" }
+    ]
+  },
+  {
+    "title": "Community Monitoring of Ghana School Feeding Programme (Civil Society)",
+    "slug": "gsfp-community-monitoring-cso",
+    "focusArea": "Governance",
+    "clientType": "Civil Society Consortium",
+    "location": "69 District Assemblies, Ghana",
+    "dates": "2007–2009",
+    "challenge": "Needed independent civil society monitoring of GSFP operations and social accountability processes.",
+    "approach": "Coordinated an independent CSO monitoring and evaluation initiative across 69 districts, training local monitors and compiling baseline and monitoring reports.",
+    "outcomes": [
+      "Baseline and monitoring reports produced",
+      "Trained local monitors in 69 districts",
+      "Evidence used in advocacy and programme improvement"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/gsfp-community-monitoring-cso-1.jpg",
+        "altText": "Community Monitoring of Ghana School Feeding Programme (Civil Society) field exercise"
+      },
+      {
+        "src": "/assets/projects/gsfp-community-monitoring-cso-2.jpg",
+        "altText": "Stakeholders reviewing GSFP monitoring data"
+      }
+    ],
+    "metrics": [
+      { "value": "69", "label": "Districts Covered" },
+      { "value": "15", "label": "CSOs Coordinated" }
+    ]
+  },
+  {
+    "title": "Kumasi Cogeneration Project — Monitoring & Verification Plan",
+    "slug": "kumasi-cogeneration-mvp",
+    "focusArea": "Energy and Green Transition",
+    "clientType": "Private + Public Partners",
+    "location": "Kumasi, Ghana",
+    "dates": "2006–2008",
+    "challenge": "The project required a robust monitoring and verification plan for emissions reductions and performance.",
+    "approach": "Prepared a monitoring and verification plan and supported participatory verification processes for the Kumasi cogeneration initiative.",
+    "outcomes": [
+      "M&V plan produced",
+      "Participatory verification process piloted",
+      "Baseline emission data established"
+    ],
+    "gallery": [
+      {
+        "src": "/assets/projects/kumasi-cogeneration-mvp-1.jpg",
+        "altText": "Technical inspection during Kumasi Cogeneration Project — Monitoring & Verification Plan"
+      },
+      {
+        "src": "/assets/projects/kumasi-cogeneration-mvp-2.jpg",
+        "altText": "Stakeholder review meeting on Kumasi Cogeneration Project M&V plan"
+      }
+    ],
+    "metrics": [
+      { "value": "1", "label": "M&V Plan" },
+      { "value": "Baseline", "label": "Emissions Data" }
+    ]
   }
 ]
