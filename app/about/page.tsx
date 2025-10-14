@@ -86,18 +86,38 @@ export default function AboutPage() {
       </section>
 
       {/* Partners Section */}
+      
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-deep text-center">Trusted Partners</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-deep text-center">
+            Trusted Partners
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {aboutData.partners.map((partner) => (
-              <div key={partner.name} className="flex items-center justify-center p-4">
-                <span className="text-deep/40 text-sm font-medium text-center">{partner.name}</span>
-              </div>
+              <a
+                key={partner.name}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center p-4 group"
+              >
+                {partner.logoPath ? (
+                  <img
+                    src={partner.logoPath}
+                    alt={partner.name}
+                    className="h-12 md:h-16 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                ) : (
+                  <span className="text-deep/40 text-sm font-medium text-center">
+                    {partner.name}
+                  </span>
+                )}
+              </a>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Contact CTA — MOVE THE ID HERE so /about#contact goes to the form */}
       <section id="contact" className="py-20 md:py-28 bg-[#281f1f] text-white">
