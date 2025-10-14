@@ -34,12 +34,12 @@
     {
       "name": "Government of Netherlands",
       "logoPath": "/assets/partners/netherlands.jpg",
-      "url": "#"
+      "url": "https://www.government.nl/"
     },
     {
       "name": "DFID",
       "logoPath": "/assets/partners/dfid.jpg",
-      "url": "#"
+      "url": "https://www.gov.uk/government/organisations/department-for-international-development"
     }
   ]
 }
