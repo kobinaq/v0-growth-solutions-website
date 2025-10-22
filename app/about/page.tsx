@@ -144,7 +144,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">Let's work together</h2>
+              <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">Let us work together</h2>
               <p className="text-xl opacity-90">
                 Ready to create meaningful change in your community? Get in touch with us.
               </p>
