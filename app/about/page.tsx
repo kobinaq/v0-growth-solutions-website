@@ -8,14 +8,25 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-[#056f39] text-white py-24 md:py-32">
-        <div className="container mx-auto px-6">
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-            Building capacity.
-            <br />
-            Empowering communities.
+      <section className="bg-[#056f39] text-white py-24 md:py-32 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full animate-pulse-glow"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 bg-[#b3e88a]/10 rounded-full animate-pulse-glow delay-1000"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/5 rounded-full animate-pulse-glow delay-500"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 leading-tight animate-slide-in-up">
+            <span className="bg-gradient-to-r from-white via-white to-[#b3e88a] bg-clip-text text-transparent">
+              Building capacity.
+              <br />
+              Empowering communities.
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl text-neutral/90">{aboutData.mission}</p>
+          <p className="text-lg sm:text-xl md:text-2xl max-w-3xl text-neutral/90 animate-slide-in-up delay-200">
+            {aboutData.mission}
+          </p>
         </div>
       </section>
 
@@ -53,28 +64,41 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 md:py-28 bg-[#056f39] text-white">
-        <div className="container mx-auto px-6">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16">Meet the Team</h2>
+      <section className="py-20 md:py-28 bg-[#056f39] text-white relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-40 h-40 bg-white/5 rounded-full animate-pulse-glow"></div>
+          <div className="absolute bottom-10 left-10 w-32 h-32 bg-[#b3e88a]/10 rounded-full animate-pulse-glow delay-1000"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 animate-slide-in-up">Meet the Team</h2>
           <div className="grid md:grid-cols-3 gap-12">
-            {teamMembers.map((member) => (
-              <div key={member.name} className="group">
-                <div className="aspect-square bg-white/5 mb-6 overflow-hidden rounded-2xl">
+            {teamMembers.map((member, index) => (
+              <div key={member.name} className="group animate-fade-in-scale" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="aspect-square bg-white/5 mb-6 overflow-hidden rounded-2xl group-hover:shadow-xl transition-all duration-500">
                     <img 
                       src={member.headshotPath || "/placeholder.svg"} 
                       alt={member.name} 
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110" 
                       />
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-2 text-white">{member.name}</h3>
-                <p className="text-white/90 font-medium mb-4">{member.role}</p>
-                <p className="text-white/85 text-sm leading-relaxed mb-4">{member.bio}</p>
+                <h3 className="font-display text-2xl font-bold mb-2 text-white group-hover:text-[#b3e88a] transition-colors duration-300">
+                  {member.name}
+                </h3>
+                <p className="text-white/90 font-medium mb-4 group-hover:text-white transition-colors duration-300">
+                  {member.role}
+                </p>
+                <p className="text-white/85 text-sm leading-relaxed mb-4 group-hover:text-white/95 transition-colors duration-300">
+                  {member.bio}
+                </p>
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
-                    className="inline-block text-white/95 hover:text-white transition-colors text-sm font-medium"
+                    className="group/link inline-block text-white/95 hover:text-white transition-colors text-sm font-medium"
                   >
-                    Contact →
+                    Contact 
+                    <span className="group-hover/link:translate-x-1 transition-transform duration-300 inline-block ml-1">→</span>
                   </a>
                 )}
               </div>
