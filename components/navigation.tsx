@@ -69,23 +69,22 @@ export default function Navigation() {
       </a>
 
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50"
+        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-[980px] mx-auto px-6 py-3">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Brand: image logo (light) and white logo for dark backgrounds if needed */}
+            {/* Brand */}
             <Link href="/" className="flex items-center">
-              {/* light logo (default) */}
               <span className="sr-only">{siteData.siteTitle} — Home</span>
               <Image
                 src="/logo.svg"
                 alt={siteData.siteTitle}
-                width={140}
-                height={32}
+                width={160}
+                height={40}
                 priority
-                className="h-8 w-auto block"
+                className="h-10 w-auto block"
               />
             </Link>
 
@@ -99,8 +98,8 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`text-sm text-[#1d1d1f] hover:text-[#056f39] transition-colors ${
-                      isActive ? "font-medium" : ""
+                    className={`text-base font-medium text-[#281f1f] hover:text-[#056f39] transition-colors ${
+                      isActive ? "text-[#056f39]" : ""
                     }`}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -113,24 +112,24 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#1d1d1f] p-1.5 rounded"
+              className="md:hidden text-[#281f1f] p-2 rounded"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
             >
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t border-gray-200/50 pt-4">
+            <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="block py-2.5 text-sm text-[#1d1d1f] hover:text-[#056f39] transition-colors"
+                  className="block py-3 text-base font-medium text-[#281f1f] hover:text-[#056f39] transition-colors"
                 >
                   {link.label}
                 </Link>
