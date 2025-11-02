@@ -11,197 +11,214 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section - Care.org Style */}
-      <section
-        className="relative min-h-[85vh] flex items-center justify-center px-6 py-20 overflow-hidden"
-      >
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url('/hero-bg.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+      {/* Hero Section - Tribe Style */}
+      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center">
+        {/* Hero Image Background */}
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full bg-gradient-to-br from-[#056f39] to-[#044d28]">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: "url('/hero-bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
+        </div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#056f39]/95 via-[#056f39]/85 to-[#056f39]/75" />
-
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto text-white">
+        {/* Hero Content */}
+        <div className="container mx-auto px-6 max-w-7xl relative z-10 text-white py-20 pb-32 md:pb-40">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               {homeData.hero.h1}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed opacity-95 animate-fade-in-up delay-200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-100">
               {homeData.hero.subhead}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-              <Link
-                href={homeData.hero.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#056f39] px-8 py-4 rounded font-bold text-lg hover:bg-[#b3e88a] hover:text-[#056f39] transition-all duration-300 shadow-lg"
-              >
-                {homeData.hero.primaryCta.label}
-                <ArrowRight className="w-5 h-5" />
+            <Link
+              href={homeData.hero.primaryCta.href}
+              className="inline-flex items-center gap-2 bg-white text-[#056f39] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors text-lg shadow-lg"
+            >
+              {homeData.hero.primaryCta.label}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Decorative wave */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <svg viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V150H1380C1320 150 1200 150 1080 150C960 150 840 150 720 150C600 150 480 150 360 150C240 150 120 150 60 150H0V0Z" fill="white"/>
+          </svg>
+        </div>
+      </section>
+
+      {/* Who We Are Section - Tribe Style */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-[#056f39] font-semibold text-sm uppercase tracking-wide">About Us</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#281f1f] mt-2 mb-6">Building Capacity, Empowering Communities</h2>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Growth Solutions is a community development consultancy firm focused on sustainable solutions through participatory planning and capacity building across Ghana.
+              </p>
+              <div className="bg-[#056f39]/10 border-l-4 border-[#056f39] p-4 mb-6">
+                <p className="text-gray-700 italic">
+                  "We believe in co-designing solutions that truly empower communities to thrive."
+                </p>
+              </div>
+              <Link href="/about" className="inline-flex items-center gap-2 bg-[#056f39] text-white hover:bg-[#044d28] font-semibold py-3 px-6 rounded-lg transition-colors">
+                Learn More About Us
+                <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                href={homeData.hero.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-[#056f39] transition-all duration-300"
-              >
-                {homeData.hero.secondaryCta.label}
-              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {homeData.valueCards.map((card, index) => {
+                const colors = [
+                  { bg: 'bg-[#056f39]/10', text: 'text-[#056f39]' },
+                  { bg: 'bg-[#b3e88a]/30', text: 'text-[#044d28]' },
+                  { bg: 'bg-blue-100', text: 'text-blue-600' },
+                  { bg: 'bg-yellow-100', text: 'text-yellow-600' }
+                ];
+                const color = colors[index % colors.length];
+                return (
+                  <div key={index} className={`${color.bg} p-6 rounded-lg`}>
+                    <div className={`${color.text} text-4xl mb-3`}>
+                      {card.icon}
+                    </div>
+                    <h3 className="font-semibold text-lg text-[#281f1f]">{card.title}</h3>
+                    <p className="text-sm text-gray-600 mt-2">{card.excerpt.substring(0, 50)}...</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Value Cards - Care.org Style */}
-      <section className="py-20 px-6 bg-[#e1eddf]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#281f1f] mb-12 text-center">
-            Why Choose Us
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {homeData.valueCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <div className="text-5xl mb-6 text-[#056f39]">
-                  {card.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-[#281f1f] mb-4">
-                  {card.title}
-                </h3>
-                <p className="text-base text-[#281f1f]/80 leading-relaxed">
-                  {card.excerpt}
-                </p>
+      {/* Impact Stats Section - Tribe Style */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-7xl text-center">
+          <span className="text-[#056f39] font-semibold text-sm uppercase tracking-wide">Our Impact</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#281f1f] mt-2 mb-12">Making a Difference Across Ghana</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="text-4xl md:text-5xl font-bold text-[#056f39] mb-2">
+                50+
               </div>
-            ))}
+              <div className="text-gray-600 font-medium">Communities Served</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="text-4xl md:text-5xl font-bold text-[#056f39] mb-2">
+                15+
+              </div>
+              <div className="text-gray-600 font-medium">Years Experience</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="text-4xl md:text-5xl font-bold text-[#056f39] mb-2">
+                100%
+              </div>
+              <div className="text-gray-600 font-medium">Community-Led</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="text-4xl md:text-5xl font-bold text-[#056f39] mb-2">
+                30+
+              </div>
+              <div className="text-gray-600 font-medium">Active Projects</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Process Steps - Care.org Style */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#281f1f] mb-16 text-center">
-            Our Approach
-          </h2>
+      {/* Our Approach Section - Tribe Style */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-12">
+            <span className="text-[#056f39] font-semibold text-sm uppercase tracking-wide">Our Approach</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#281f1f] mt-2">How We Work</h2>
+            <p className="text-gray-600 mx-auto mt-4 max-w-2xl">
+              Our proven methodology ensures sustainable development through participatory planning and community ownership
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {homeData.processSteps.map((step, index) => (
-              <div
-                key={step.number}
-                className="relative group animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <div className="text-6xl font-bold text-[#b3e88a] mb-4">
-                  {step.number.toString().padStart(2, "0")}
+              <div key={step.number} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#056f39] text-white rounded-full text-2xl font-bold mb-4">
+                  {step.number}
                 </div>
                 <h3 className="text-xl font-bold text-[#281f1f] mb-3">
                   {step.title}
                 </h3>
-                <p className="text-base text-[#281f1f]/80 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {step.summary}
                 </p>
-                {/* Connection line */}
-                {index < homeData.processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 -right-4 w-8 h-0.5 bg-[#b3e88a]"></div>
-                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Focus Areas - Care.org Style */}
-      <section className="py-24 px-6 bg-[#056f39] text-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">
-            Our Focus Areas
-          </h2>
-          <p className="text-xl text-white/90 text-center mb-16 max-w-3xl mx-auto">
-            Building sustainable futures together through community-led initiatives
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {homeData.focusAreas.map((area, index) => (
+      {/* Focus Areas Section - Tribe Style */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-12">
+            <span className="text-[#056f39] font-semibold text-sm uppercase tracking-wide">Our Work</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#281f1f] mt-2">Focus Areas</h2>
+            <p className="text-gray-600 mx-auto mt-4 max-w-2xl">
+              Discover the transformative work we're doing across communities
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {homeData.focusAreas.slice(0, 6).map((area, index) => (
               <div
                 key={area.slug}
-                className="group p-8 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/15 transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#b3e88a] transition-colors">
-                  {area.title}
-                </h3>
-                <p className="text-base text-white/85 leading-relaxed">
-                  {area.short}
-                </p>
+                <div className="p-6">
+                  <span className="text-xs font-semibold text-[#056f39] uppercase">{area.title}</span>
+                  <h3 className="text-xl font-bold mt-2 mb-3 text-[#281f1f]">{area.title}</h3>
+                  <p className="text-gray-600 mb-4">{area.short}</p>
+                  <Link
+                    href="/projects"
+                    className="text-[#056f39] hover:text-[#044d28] font-semibold inline-flex items-center gap-2"
+                  >
+                    View Projects
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 bg-white text-[#056f39] px-8 py-4 rounded font-bold text-lg hover:bg-[#b3e88a] transition-all duration-300 shadow-lg"
-            >
+            <Link href="/projects" className="inline-flex items-center gap-2 bg-white border-2 border-[#056f39] text-[#056f39] hover:bg-[#056f39] hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
               View All Projects
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - Care.org Style */}
-      <section className="py-24 px-6 bg-[#e1eddf]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#281f1f] mb-12 text-center">
-            Our Impact
-          </h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center p-8 bg-white rounded-lg shadow-md animate-fade-in-up">
-              <div className="text-6xl font-bold mb-4 text-[#056f39]">50+</div>
-              <div className="text-xl font-semibold text-[#281f1f]">Communities Served</div>
-            </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-md animate-fade-in-up delay-200">
-              <div className="text-6xl font-bold mb-4 text-[#056f39]">15+</div>
-              <div className="text-xl font-semibold text-[#281f1f]">Years Experience</div>
-            </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-md animate-fade-in-up delay-400">
-              <div className="text-6xl font-bold mb-4 text-[#056f39]">100%</div>
-              <div className="text-xl font-semibold text-[#281f1f]">Community-Led</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Care.org Style */}
-      <section className="py-24 px-6 bg-[#281f1f] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/hero-bg.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-        </div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to create sustainable change?
-          </h2>
-          <p className="text-xl mb-10 opacity-90 leading-relaxed">
+      {/* Get Involved Section - Tribe Style */}
+      <section className="py-16 bg-gradient-to-r from-[#056f39] to-[#044d28] text-white">
+        <div className="container mx-auto px-6 max-w-7xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to create sustainable change?</h2>
+          <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
             Let's co-design solutions that empower your community.
           </p>
-          <Link
-            href="/about#contact"
-            className="inline-flex items-center gap-2 bg-[#056f39] text-white px-10 py-4 rounded font-bold text-lg hover:bg-[#b3e88a] hover:text-[#056f39] transition-all duration-300 shadow-lg"
-          >
-            Get in Touch
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/about#contact" className="bg-white text-[#056f39] hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
+              Get in Touch
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link href="/services" className="bg-transparent border-2 border-white hover:bg-white hover:text-[#056f39] font-semibold py-4 px-8 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
+              Our Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
     </main>
