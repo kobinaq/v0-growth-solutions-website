@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import homeData from "@/content/home.json"
 import siteData from "@/content/site.json"
+import projectsData from "@/content/projects/all-projects.json"
 
 export const metadata = {
   title: `${siteData.siteTitle} - Community-led sustainable development`,
@@ -9,6 +10,8 @@ export const metadata = {
 }
 
 export default function HomePage() {
+  const featuredProject = projectsData[0]
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -124,6 +127,59 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Featured Project */}
+      <section className="py-24 px-6 bg-[#e1eddf]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#281f1f] mb-16 text-center">Featured Project</h2>
+          <article className="group">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image */}
+              <div>
+                <div className="aspect-[4/3] bg-[#281f1f]/10 overflow-hidden rounded-xl">
+                  <img
+                    src={featuredProject.gallery?.[0] || "/placeholder.svg"}
+                    alt={featuredProject.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div>
+                <div className="text-[#056f39] font-medium mb-4">
+                  {featuredProject.focusArea} • {featuredProject.location}
+                </div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-6 text-[#281f1f]">
+                  {featuredProject.title}
+                </h3>
+                <p className="text-lg text-[#281f1f]/80 mb-6 leading-relaxed">
+                  {featuredProject.challenge}
+                </p>
+
+                {/* Metrics */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                  {featuredProject.metrics?.map((metric) => (
+                    <div key={metric.label}>
+                      <div className="font-display text-3xl font-bold text-[#056f39] mb-1">
+                        {metric.value}
+                      </div>
+                      <div className="text-sm text-[#281f1f]/70">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href={`/projects/${featuredProject.slug}`}
+                  className="inline-flex items-center gap-2 text-[#056f39] font-bold hover:gap-4 transition-all"
+                >
+                  View Case Study →
+                </Link>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
