@@ -2,65 +2,69 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import homeData from "@/content/home.json"
 import siteData from "@/content/site.json"
+import HeroCarousel from "@/components/hero-carousel"
+import Card from "@/components/card"
 
 export const metadata = {
   title: `${siteData.siteTitle} - Community-led sustainable development`,
   description: siteData.metaDescription,
 }
 
+const heroImages = [
+  "/assets/projects/ada-water-1.jpg",
+  "/assets/projects/agroforestry-1.jpg",
+  "/assets/projects/solar-school-1.jpg",
+]
+
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        className="relative min-h-[90vh] flex items-center justify-center px-6 py-20 bg-gradient-to-br from-[#056f39]/90 to-[#044d28]/90 text-white overflow-hidden"
-      >
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url('/hero-bg.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-
-        {/* Animated background elements */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full animate-pulse-glow"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 bg-[#b3e88a]/10 rounded-full animate-pulse-glow delay-1000"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/5 rounded-full animate-pulse-glow delay-500"></div>
-          <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-[#b3e88a]/5 rounded-full animate-float"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-white/10 rounded-full animate-float delay-700"></div>
+      {/* Hero Section - Split Layout with Image Carousel */}
+      <section className="relative min-h-[90vh] flex items-center px-6 py-20 lg:py-32 bg-gradient-to-br from-[#e1eddf] to-white overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23056f39' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          ></div>
         </div>
 
-        {/* Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#056f39]/80 to-[#044d28]/80" />
+        {/* Container */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Image Carousel */}
+            <div className="order-2 lg:order-1 h-[400px] sm:h-[500px] lg:h-[600px] animate-fade-in-scale">
+              <HeroCarousel images={heroImages} interval={5000} />
+            </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 leading-[1.1] tracking-tight animate-slide-in-up">
-            <span className="bg-gradient-to-r from-white via-white to-[#b3e88a] bg-clip-text text-transparent">
-              {homeData.hero.h1}
-            </span>
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[#b3e88a] max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-slide-in-up delay-200">
-            {homeData.hero.subhead}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-in-up delay-300">
-            <Link
-              href={homeData.hero.primaryCta.href}
-              className="group inline-flex items-center gap-2 bg-white text-[#056f39] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#b3e88a] transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            >
-              {homeData.hero.primaryCta.label}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link
-              href={homeData.hero.secondaryCta.href}
-              className="group inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            >
-              {homeData.hero.secondaryCta.label}
-            </Link>
+            {/* Right: Text Content */}
+            <div className="order-1 lg:order-2 animate-slide-in-up">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[1.1] tracking-tight text-[#281f1f]">
+                <span className="bg-gradient-to-r from-[#056f39] via-[#044d28] to-[#056f39] bg-clip-text text-transparent">
+                  {homeData.hero.h1}
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-2xl text-[#281f1f]/70 mb-8 lg:mb-10 leading-relaxed animate-slide-in-up delay-200">
+                {homeData.hero.subhead}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-up delay-300">
+                <Link
+                  href={homeData.hero.primaryCta.href}
+                  className="group inline-flex items-center justify-center gap-2 bg-[#056f39] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#044d28] transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                >
+                  {homeData.hero.primaryCta.label}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+                <Link
+                  href={homeData.hero.secondaryCta.href}
+                  className="group inline-flex items-center justify-center gap-2 border-2 border-[#056f39] text-[#056f39] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#056f39]/5 transition-all duration-300 hover:scale-105"
+                >
+                  {homeData.hero.secondaryCta.label}
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -74,24 +78,16 @@ export default function HomePage() {
           }}></div>
         </div>
         
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {homeData.valueCards.map((card, index) => (
-              <div 
-                key={index} 
-                className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 animate-fade-in-scale"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="text-4xl text-[#056f39] mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {card.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-[#281f1f] mb-4 group-hover:text-[#056f39] transition-colors duration-300">
-                  {card.title}
-                </h3>
-                <p className="text-[#281f1f]/70 leading-relaxed group-hover:text-[#281f1f] transition-colors duration-300">
-                  {card.excerpt}
-                </p>
-              </div>
+              <Card
+                key={index}
+                title={card.title}
+                description={card.excerpt}
+                icon={card.icon}
+                className="animate-fade-in-scale"
+              />
             ))}
           </div>
         </div>

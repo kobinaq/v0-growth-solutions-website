@@ -69,15 +69,14 @@ export default function Navigation() {
       </a>
 
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e1eddf]"
+        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#e1eddf] shadow-sm transition-all duration-300"
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Brand: image logo (light) and white logo for dark backgrounds if needed */}
-            <Link href="/" className="flex items-center">
-              {/* light logo (default) */}
+            {/* Brand: image logo */}
+            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <span className="sr-only">{siteData.siteTitle} — Home</span>
               <Image
                 src="/logo.svg"
@@ -87,10 +86,6 @@ export default function Navigation() {
                 priority
                 className="h-10 w-auto block"
               />
-              {/* example: if you have a white variant, you can include it and toggle with dark classes:
-                  <Image src="/logo-white.svg" alt={siteData.siteTitle} width={160} height={40}
-                    className="h-10 w-auto hidden dark:block" />
-              */}
             </Link>
 
             {/* Desktop Navigation */}
@@ -103,21 +98,31 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`text-[#281f1f] hover:text-[#056f39] font-medium transition-colors ${
-                      isActive ? "underline underline-offset-4 decoration-2" : ""
+                    className={`text-[#281f1f] hover:text-[#056f39] font-medium transition-all duration-200 relative ${
+                      isActive ? "text-[#056f39]" : ""
                     }`}
                     aria-current={isActive ? "page" : undefined}
                   >
                     {link.label}
+                    {isActive && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#056f39] rounded-full"></span>
+                    )}
                   </Link>
                 )
               })}
+              <Link
+                href="/about#contact"
+                onClick={(e) => handleNavClick(e, "/about#contact")}
+                className="bg-[#056f39] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#044d28] transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                Get Started
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#281f1f] p-2 rounded"
+              className="md:hidden text-[#281f1f] p-2 rounded hover:bg-[#e1eddf] transition-colors"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -128,17 +133,24 @@ export default function Navigation() {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t border-[#e1eddf] pt-4">
+            <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t border-[#e1eddf] pt-4 animate-fade-in-scale">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="block py-2 text-[#281f1f] hover:text-[#056f39] font-medium transition-colors"
+                  className="block py-3 px-4 text-[#281f1f] hover:text-[#056f39] hover:bg-[#e1eddf] rounded-lg font-medium transition-all"
                 >
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/about#contact"
+                onClick={(e) => handleNavClick(e, "/about#contact")}
+                className="block mt-4 text-center bg-[#056f39] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#044d28] transition-all"
+              >
+                Get Started
+              </Link>
             </div>
           )}
         </div>
