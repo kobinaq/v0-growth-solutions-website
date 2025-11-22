@@ -24,7 +24,7 @@ export default function Navigation() {
     setIsOpen(false)
   }, [pathname])
 
-  // handle links with hash fragments so /about#contact reliably scrolls to the form
+  // handle links with hash fragments
   const handleNavClick = async (e, href) => {
     if (href.includes("#")) {
       e.preventDefault()
@@ -32,18 +32,14 @@ export default function Navigation() {
       const targetId = hash
 
       if (pathname === path || (path === "" && pathname === "/")) {
-        // same page — scroll to element if present
         const el = document.getElementById(targetId)
         if (el) {
           el.scrollIntoView({ behavior: "smooth", block: "start" })
-          // update URL hash without reloading
           window.history.replaceState({}, "", `${path}#${targetId}`)
         } else {
-          // fallback: navigate to path
           router.push(href)
         }
       } else {
-        // navigate to the page, then scroll after render
         await router.push(path)
         setTimeout(() => {
           const el = document.getElementById(targetId)
@@ -53,43 +49,42 @@ export default function Navigation() {
       setIsOpen(false)
       return
     }
-
-    // normal link: just close the mobile menu (Link will handle navigation)
     setIsOpen(false)
   }
 
   return (
     <>
-      {/* Skip link for keyboard users */}
+      {/* Skip link */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-white text-black px-3 py-2 rounded"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-black text-white px-4 py-2 rounded-full text-sm font-medium"
       >
         Skip to content
       </a>
 
+      {/* Floating Glass Island Navigation */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-2xl"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-full px-6 py-3 shadow-sm">
           <div className="flex items-center justify-between">
-            {/* Brand */}
+            {/* Logo */}
             <Link href="/" className="flex items-center">
-              <span className="sr-only">{siteData.siteTitle} — Home</span>
+              <span className="sr-only">{siteData.siteTitle}</span>
               <Image
                 src="/logo.svg"
                 alt={siteData.siteTitle}
-                width={160}
-                height={40}
+                width={120}
+                height={30}
                 priority
-                className="h-10 w-auto block"
+                className="h-7 w-auto"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-2">
               {navLinks.map((link) => {
                 const basePath = link.href.split("#")[0] || "/"
                 const isActive = basePath === pathname
@@ -98,9 +93,13 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`text-base font-medium text-[#281f1f] hover:text-[#056f39] transition-colors ${
-                      isActive ? "text-[#056f39]" : ""
-                    }`}
+                    className={`
+                      px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full
+                      ${isActive
+                        ? "bg-black text-white"
+                        : "text-gray-700 hover:text-black hover:bg-gray-100"
+                      }
+                    `}
                     aria-current={isActive ? "page" : undefined}
                   >
                     {link.label}
@@ -112,28 +111,37 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#281f1f] p-2 rounded"
+              className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
-              aria-controls="mobile-navigation"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="block py-3 text-base font-medium text-[#281f1f] hover:text-[#056f39] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+            <div className="md:hidden mt-4 pt-4 border-t border-gray-200 space-y-1">
+              {navLinks.map((link) => {
+                const basePath = link.href.split("#")[0] || "/"
+                const isActive = basePath === pathname
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className={`
+                      block px-4 py-2.5 text-sm font-medium transition-all duration-200 rounded-full
+                      ${isActive
+                        ? "bg-black text-white"
+                        : "text-gray-700 hover:bg-gray-100"
+                      }
+                    `}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
             </div>
           )}
         </div>
