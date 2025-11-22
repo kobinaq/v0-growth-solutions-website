@@ -13,10 +13,14 @@ export default function Navigation() {
   const router = useRouter()
 
   const navLinks = [
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Services", href: "/services" },
-    { label: "Contact", href: "/about#contact" },
+    { label: "Copy", href: "/about" },
+    { label: "CV", href: "/projects" },
+  ]
+
+  const socialLinks = [
+    { label: "LinkedIn", href: "/about#contact" },
+    { label: "Dribbble", href: "/projects" },
+    { label: "Instagram", href: "/about#contact" },
   ]
 
   // close mobile nav on route change
@@ -24,7 +28,7 @@ export default function Navigation() {
     setIsOpen(false)
   }, [pathname])
 
-  // handle links with hash fragments so /about#contact reliably scrolls to the form
+  // handle links with hash fragments
   const handleNavClick = async (e, href) => {
     if (href.includes("#")) {
       e.preventDefault()
@@ -32,18 +36,14 @@ export default function Navigation() {
       const targetId = hash
 
       if (pathname === path || (path === "" && pathname === "/")) {
-        // same page — scroll to element if present
         const el = document.getElementById(targetId)
         if (el) {
           el.scrollIntoView({ behavior: "smooth", block: "start" })
-          // update URL hash without reloading
           window.history.replaceState({}, "", `${path}#${targetId}`)
         } else {
-          // fallback: navigate to path
           router.push(href)
         }
       } else {
-        // navigate to the page, then scroll after render
         await router.push(path)
         setTimeout(() => {
           const el = document.getElementById(targetId)
@@ -54,7 +54,6 @@ export default function Navigation() {
       return
     }
 
-    // normal link: just close the mobile menu (Link will handle navigation)
     setIsOpen(false)
   }
 
@@ -69,27 +68,23 @@ export default function Navigation() {
       </a>
 
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#e1eddf] shadow-sm transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 bg-[#f5f5f0]/95 backdrop-blur-sm transition-all duration-300"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            {/* Brand: image logo */}
-            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            {/* Brand: Email/Contact */}
+            <Link 
+              href="/" 
+              className="text-sm text-[#281f1f] hover:text-[#056f39] transition-colors font-medium"
+            >
               <span className="sr-only">{siteData.siteTitle} — Home</span>
-              <Image
-                src="/logo.svg"
-                alt={siteData.siteTitle}
-                width={160}
-                height={40}
-                priority
-                className="h-10 w-auto block"
-              />
+              kawsari.designs@gmail.com
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            {/* Desktop Navigation - Center */}
+            <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
               {navLinks.map((link) => {
                 const basePath = link.href.split("#")[0] || "/"
                 const isActive = basePath === pathname
@@ -98,59 +93,74 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`text-[#281f1f] hover:text-[#056f39] font-medium transition-all duration-200 relative ${
+                    className={`text-sm text-[#281f1f] hover:text-[#056f39] font-medium transition-colors ${
                       isActive ? "text-[#056f39]" : ""
                     }`}
                     aria-current={isActive ? "page" : undefined}
                   >
                     {link.label}
-                    {isActive && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#056f39] rounded-full"></span>
-                    )}
                   </Link>
                 )
               })}
-              <Link
-                href="/about#contact"
-                onClick={(e) => handleNavClick(e, "/about#contact")}
-                className="bg-[#056f39] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#044d28] transition-all duration-300 hover:scale-105 hover:shadow-lg"
-              >
-                Get Started
-              </Link>
+            </div>
+
+            {/* Desktop Navigation - Right (Social Links) */}
+            <div className="hidden md:flex items-center gap-8">
+              {socialLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-sm text-[#281f1f] hover:text-[#056f39] font-medium transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#281f1f] p-2 rounded hover:bg-[#e1eddf] transition-colors"
+              className="md:hidden text-[#281f1f] p-2 rounded hover:bg-[#281f1f]/5 transition-colors"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t border-[#e1eddf] pt-4 animate-fade-in-scale">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="block py-3 px-4 text-[#281f1f] hover:text-[#056f39] hover:bg-[#e1eddf] rounded-lg font-medium transition-all"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="/about#contact"
-                onClick={(e) => handleNavClick(e, "/about#contact")}
-                className="block mt-4 text-center bg-[#056f39] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#044d28] transition-all"
-              >
-                Get Started
-              </Link>
+            <div 
+              id="mobile-navigation" 
+              className="md:hidden mt-6 pb-4 border-t border-[#281f1f]/10 pt-6 animate-fade-in"
+            >
+              <div className="space-y-1 mb-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="block py-2.5 px-4 text-[#281f1f] hover:text-[#056f39] hover:bg-[#281f1f]/5 rounded-lg font-medium transition-all text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              
+              <div className="border-t border-[#281f1f]/10 pt-4 space-y-1">
+                {socialLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="block py-2.5 px-4 text-[#281f1f] hover:text-[#056f39] hover:bg-[#281f1f]/5 rounded-lg font-medium transition-all text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>
