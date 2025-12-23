@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { Menu, X } from "lucide-react"
@@ -13,14 +12,14 @@ export default function Navigation() {
   const router = useRouter()
 
   const navLinks = [
-    { label: "Copy", href: "/about" },
-    { label: "CV", href: "/projects" },
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
+    { label: "Services", href: "/services" },
   ]
 
   const socialLinks = [
-    { label: "LinkedIn", href: "/about#contact" },
-    { label: "Dribbble", href: "/projects" },
-    { label: "Instagram", href: "/about#contact" },
+    { label: "LinkedIn", href: "#" },
+    { label: "Dribbble", href: "#" },
   ]
 
   // close mobile nav on route change
@@ -29,7 +28,7 @@ export default function Navigation() {
   }, [pathname])
 
   // handle links with hash fragments
-  const handleNavClick = async (e, href) => {
+  const handleNavClick = async (e: React.MouseEvent, href: string) => {
     if (href.includes("#")) {
       e.preventDefault()
       const [path, hash] = href.split("#")
@@ -62,29 +61,29 @@ export default function Navigation() {
       {/* Skip link for keyboard users */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-white text-black px-3 py-2 rounded"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-background text-foreground px-3 py-2 rounded border border-border"
       >
         Skip to content
       </a>
 
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-[#f5f5f0]/95 backdrop-blur-sm transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40 transition-all duration-300"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-7xl mx-auto px-6 py-5">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Brand: Email/Contact */}
-            <Link 
-              href="/" 
-              className="text-sm text-[#281f1f] hover:text-[#056f39] transition-colors font-medium"
+            {/* Brand */}
+            <Link
+              href="/"
+              className="text-sm text-foreground hover:text-primary transition-colors font-semibold tracking-tight"
             >
               <span className="sr-only">{siteData.siteTitle} — Home</span>
-              kawsari.designs@gmail.com
+              {siteData.siteTitle}
             </Link>
 
             {/* Desktop Navigation - Center */}
-            <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <div className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
               {navLinks.map((link) => {
                 const basePath = link.href.split("#")[0] || "/"
                 const isActive = basePath === pathname
@@ -93,9 +92,8 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`text-sm text-[#281f1f] hover:text-[#056f39] font-medium transition-colors ${
-                      isActive ? "text-[#056f39]" : ""
-                    }`}
+                    className={`text-[13px] text-muted-foreground hover:text-foreground font-medium transition-colors ${isActive ? "text-foreground" : ""
+                      }`}
                     aria-current={isActive ? "page" : undefined}
                   >
                     {link.label}
@@ -108,10 +106,9 @@ export default function Navigation() {
             <div className="hidden md:flex items-center gap-8">
               {socialLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-sm text-[#281f1f] hover:text-[#056f39] font-medium transition-colors"
+                  className="text-[13px] text-muted-foreground hover:text-foreground font-medium transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -121,7 +118,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#281f1f] p-2 rounded hover:bg-[#281f1f]/5 transition-colors"
+              className="md:hidden text-foreground p-2 rounded-lg hover:bg-muted transition-colors"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -132,9 +129,9 @@ export default function Navigation() {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div 
-              id="mobile-navigation" 
-              className="md:hidden mt-6 pb-4 border-t border-[#281f1f]/10 pt-6 animate-fade-in"
+            <div
+              id="mobile-navigation"
+              className="md:hidden mt-4 pb-6 animate-fade-in"
             >
               <div className="space-y-1 mb-6">
                 {navLinks.map((link) => (
@@ -142,20 +139,19 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="block py-2.5 px-4 text-[#281f1f] hover:text-[#056f39] hover:bg-[#281f1f]/5 rounded-lg font-medium transition-all text-sm"
+                    className="block py-3 px-4 text-foreground hover:bg-muted rounded-xl font-medium transition-all text-sm"
                   >
                     {link.label}
                   </Link>
                 ))}
               </div>
-              
-              <div className="border-t border-[#281f1f]/10 pt-4 space-y-1">
+
+              <div className="border-t border-border/50 pt-4 space-y-1">
                 {socialLinks.map((link) => (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className="block py-2.5 px-4 text-[#281f1f] hover:text-[#056f39] hover:bg-[#281f1f]/5 rounded-lg font-medium transition-all text-sm"
+                    className="block py-3 px-4 text-muted-foreground hover:text-foreground hover:bg-muted rounded-xl font-medium transition-all text-sm"
                   >
                     {link.label}
                   </Link>
